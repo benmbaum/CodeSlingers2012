@@ -65,9 +65,11 @@
                     var timeMessage;
                     var time = (new Date().getTime() - new Date(this.created_at).getTime()) / 360000;
                     if (time >= 24) {
-                        timeMessage = 'Posted ' + Math.floor(time / 24) + ' days ago';
+                        var days = Math.floor(time / 24);
+                        timeMessage = 'Posted ' + days + ' day' + (days === 1 ? '' : 's') + ' ago';
                     } else {
-                        timeMessage = 'Posted ' + Math.floor(time) + ' hours ago';
+                        var hours = Math.floor(time);
+                        timeMessage = 'Posted ' + hours + ' hour' + (hours === 1 ? '' : 's') + ' ago';
                     }
 
                     var circle = $(circleSelector + (i + 1));
@@ -77,10 +79,41 @@
             }
         });
     };
+
+    Codeslinger.GetIG = function() {
+        var igUrl = 'https://api.instagram.com/v1/tags/sushi/media/recent?client_id=3e201de086ee486aaafe88f0d2849ff1';
+        var igList = $('div.ig>ul');
+        igList.empty();
+        $.ajax({
+            url: igUrl,
+            type: 'GET',
+            dataType: "jsonp",
+            success: function (json) {
+                $.each(json, function (i) {
+                    if (i === 'data') {
+                        $.each(this, function (x) {
+                            if(x < 10){
+                                var igListItem = $('<li />');
+                                var igItemLink = $('<a target=\'_blank\' />');
+                                var igLinkImage = $('<img />');
+                                
+                                igLinkImage.attr('src', this.images.thumbnail.url).attr('alt', this.caption.text);
+                                igItemLink.attr('href', this.link).append(igLinkImage);
+                                igListItem.append(igItemLink);
+                                igList.append(igListItem);
+                            }
+                        });
+                    }
+                });
+            }
+        });
+    };
+    
 })(window);
 
 $(function() {
     Codeslinger.MapAddress('1000 Nicollet Mall Minneapolis, MN 55403');
     Codeslinger.MapAddress('4008 7th St W St Paul, MN 55116');
     Codeslinger.GetTweets();
+    Codeslinger.GetIG();
 });
