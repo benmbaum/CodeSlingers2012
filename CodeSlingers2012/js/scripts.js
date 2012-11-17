@@ -108,6 +108,21 @@
             }
         });
     };
+
+    Codeslinger.InitVideo = function () {
+        $("#dialog-modal-video").dialog({
+            autoOpen: false,
+            modal: true
+        });
+
+        $('.ui-dialog').find('button:contains("Close")').addClass('ui-icon-circle-close');
+
+        $("#video-opener").click(function () {
+            $("#dialog-modal-video").dialog("open");
+            return false;
+        });
+
+    }
     
 })(window);
 
@@ -116,4 +131,5 @@ $(function() {
     Codeslinger.MapAddress('4008 7th St W St Paul, MN 55116');
     Codeslinger.GetTweets();
     Codeslinger.GetIG();
+    Codeslinger.InitVideo();
 });
