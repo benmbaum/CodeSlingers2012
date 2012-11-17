@@ -3,10 +3,41 @@
     <ul>
         @foreach (var item in Model.items)
         {
+            var className = string.Empty;
+            switch (item.SectionId)
+            {
+                case 1:
+                    className = "home";
+                    break;
+                case 2:
+                    className = "about-us";
+                    break;
+                case 3:
+                    className = "menu";
+                    break;
+                case 4:
+                    className = "locations";
+                    break;
+                case 5:
+                    className = "jobs";
+                    break;
+                case 6:
+                    className = "connect";
+                    break;
+            }
             
+            if (!string.IsNullOrEmpty(item.ContentUrl))
+            {
+                <li><a class="@className" href="@item.ContentUrl">@item.ContentUrlText</a></li>
+            }
+            else
+            {
+                <li><span>item.ContentText</span></li>
+            }
         }
     </ul>
 </nav>
+
 
 @*
 <li><a class="home" href="#">Home</a></li>
