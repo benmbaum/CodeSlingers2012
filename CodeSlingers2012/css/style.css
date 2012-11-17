@@ -230,10 +230,20 @@ ol { list-style-type: decimal; }
 
 /* Sprite backgrounds
 -----------------------------------------*/
-button { background: url( ‘../Images/masterSprite.png’ ) no-repeat; }
+.prev, .next,  #homecallouts article summary a span{ background: url( ../Images/masterSprite.png ) no-repeat; }
 
 /* Buttons
 -----------------------------------------*/
+.prev {
+	background-position: 0 0;
+	float: left;
+	margin-left: 19px;
+}
+.next {
+	background-position: -46px 0;
+	float:right;
+	margin-right:19px;
+}
 
 /*-----------------------------------------------------------------------------------
  3. Page Structure
@@ -241,7 +251,7 @@ button { background: url( ‘../Images/masterSprite.png’ ) no-repeat; }
 html {
 	background: url(../Images/repeat-bg.png) center 0 repeat;
 	border: 1px solid #4c4c4c;
-	height: 100%;
+	height: 4621px;
 	width: 100%;
 }
 body { 
@@ -251,12 +261,19 @@ body {
 	width: 1598px;
 }
 #wrapper { 
+	margin: 0 auto;
+	width: 1401px;
+}
+#mainContainer {
+	margin: 0 auto;
 	width: 1401px;
 }
 header {
 	position: fixed;
 	top: 0;
+	left: 177px;
 	width: 1600px;
+	z-index: 200;
 }
 footer { }
 
@@ -275,7 +292,6 @@ header li span {
 nav {
 	background: url(../Images/nav.png) no-repeat;
 	height: 99px;
-	margin: 0 auto;
 	width: 1401px;
 }
 nav ul {
@@ -296,28 +312,110 @@ nav a {
 nav a.current {
 	color: #ffcccc;
 }
-nav a#home { margin-right: 54px; }
-nav a#about-us { margin-right: 50px; }
-nav a#menu { margin-right: 38px; }
-nav a#locations { 
+nav a.home { margin-right: 54px; }
+nav a.about-us { margin-right: 50px; }
+nav a.menu { margin-right: 38px; }
+nav a.locations { 
 	margin: 0 44px 0 24px;
 	padding-top: 21px;
 }
-nav a#jobs { 
+nav a.jobs { 
 	margin-right: 44px;
 	padding-top: 21px;
 }
-nav a#connect { padding-top: 21px; }
+nav a.connect { padding-top: 21px; }
 
 /* Homepage
 ------------------------------------------*/
-.logo {
-	background: url(../Images/gts-logo.png) no-repeat;
-	display: block;
-	height: 255px;
+#home {
+	background: #000;
+	height: 733px;
+	position: relative;
+}
+#home h1 {
+	position: absolute;
+	top:126px;
+	left: 220px;
+	z-index: 1;
+	text-indent: -999px;
 	width: 497px;
 }
+#home h1 img {
+	display: block;
+}
+#homerotator {
+	height: 100%;
+}
+#homerotatornav {
+	position: absolute;
+	top: 360px;
+	width: 100%;
+}
+#homerotatornav a {
+	display: block;
+	height: 42px;
+	width: 42px;
+	text-indent: -9999px;
+}
+#homecallouts {
+	background: rgba(0,0,0,.4);
+	height: 201px;
+	padding-left: 200px;
+	position: absolute;
+	top: 533px;
+	width: 1200px;
+}
+#homecallouts article {
+	float: left;
+	width:302px;
+	margin-left: 65px;
+}
 
+#homecallouts article title {
+	display: block;
+	font: 34px/24px 'PacificoRegular';
+	color: #ffffff;
+	margin-top: 21px;
+}
+#homecallouts article summary {
+	font: 16px/24px 'OpenSansBold';
+	color: white;
+	display: block;
+	margin-top: 21px;
+}
+#homecallouts article.featured title { 
+	margin-left: 24px;
+	position: relative;
+	z-index: 2;
+	}
+#homecallouts article.featured summary {
+	width: 173px;
+	float: right;
+}
+#homecallouts article.featured img {
+	z-index: 1;
+	position: relative;
+	top: -8px;
+}
+#homecallouts article summary a {
+	display: block;
+	text-decoration: none;
+	color: #ef3b3b;
+}
+
+#homecallouts article summary a span {
+	padding-right: 8px;
+	display: inline-block;
+	background-position: -95px 0;
+	height: 11px;
+	width: 7px;
+}
+#homecallouts article.where-are-we {
+	width: 260px;
+}
+#homecallouts article.where-are-we summary {
+	width: 260px;
+}
 
 /*-----------------------------------------------------------------------------------
  5. Conditional styles
