@@ -266,7 +266,7 @@ body {
 }
 #mainContainer {
 	margin: 0 auto;
-	width: 1398px;
+	width: 1399px;
 }
 header {
 	position: fixed;
@@ -274,7 +274,6 @@ header {
 	width: 1600px;
 	z-index: 200;
 }
-footer { }
 
 /*-----------------------------------------------------------------------------------
 4. Layouts and Page Elements
@@ -477,6 +476,54 @@ nav a.connect { padding-top: 21px; }
 	left: 2px;
 	top: -8px;
 }
+
+/* Menu
+------------------------------------------*/
+#menu {
+	background: url(../Images/menu-bg.png) no-repeat;
+	height: 718px;
+	position: relative;
+	top: -16px;
+	width: 100%;
+}
+
+/* Locations
+------------------------------------------*/
+#locations {
+	background: #f0ede4;
+	height: 701px;
+	position: relative;
+	top: -16px;
+}
+
+/* Jobs
+------------------------------------------*/
+#jobs {
+	background: url(../Images/jobs-bg.jpg) no-repeat;
+	height: 703px;
+	position: relative;
+	top: -16px;
+}
+
+/* Connect
+------------------------------------------*/
+#connect {
+	background: url(../Images/connect-bg.jpg) no-repeat;
+	height: 703px;
+	position: relative;
+	top: -16px;
+}
+
+/* Footer
+------------------------------------------*/
+footer {
+	background: #000000;
+	height: 236px;
+	position: relative;
+	top: -16px;
+	width: 1401px;
+}
+
 /*-----------------------------------------------------------------------------------
  5. Conditional styles
 -----------------------------------------------------------------------------------*/
