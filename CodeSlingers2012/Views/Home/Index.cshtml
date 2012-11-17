@@ -11,42 +11,25 @@
 <div id="mainContainer">
     <section class="parallx_container" id="home">
         <h1><img src="@Url.Content("~/Images/gts-logo.png")" alt="Good Time Sushi" /></h1>
-        @{Html.DisplayFor(m => m.homeImages, "HomeImage");}
-        @{Html.DisplayFor(m => m.homeLinks, "HomeLink");}
+        @Html.DisplayFor(m => m.homeImages, "HomeImage");
+        @Html.DisplayFor(m => m.homeLinks, "HomeLink");
     </section>
-
     <section class="parallx_container" id="about-us">
-        <section id="left-roll">
-            <img src="" alt="" />
-        </section>
-        <section id="about-content">
-            <h2>About Us</h2>
-            <p>
-                Sed nec magna tellus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Morbi scelerisque luctus lectus, rutrum pretium lorem scelerisque in. Curabitur sed sem enim. Suspendisse vel ipsum elit. Ut pharetra euismod felis in adipiscing.
-            </p>
-            <img src="" alt="" />
-        </section>
-        <section id="right-roll">
-            <img src="" alt="" />
-            <img src="" alt="" />
-            <img src="" alt="" />
-            <img src="" alt="" />
-        </section>
+        @{ Html.RenderPartial("DisplayTemplates/About"); }
     </section>
-
     <section class="parallx_container" id="menu">
         
     </section>
     <section class="parallx_container" id="locations">
-        @{Html.DisplayFor(m => m.locations, "Locations");}
+        @Html.DisplayFor(m => m.locations, "Locations");
     </section>
     <section class="parallx_container" id="jobs">
-        @{Html.DisplayFor(m => m.jobs, "Jobs");}
+        @Html.DisplayFor(m => m.jobs, "Jobs");
     </section>
     <section class="parallx_container" id="connect">
-
+        @{ Html.RenderPartial("DisplayTemplates/Connect"); }
     </section>
     <footer class="parallx_container">
-
+        @Html.DisplayFor(m => m.footer, "Footer");
     </footer>
 </div>
