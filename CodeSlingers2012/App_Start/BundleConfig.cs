@@ -19,8 +19,6 @@ namespace CodeSlingers2012
                         "~/Scripts/jquery.validate*"));
 
             bundles.Add(new ScriptBundle("~/bundles/api").Include(
-                        "~/js/ig.js",
-                        "~/js/twit.js",
                         "~/js/googlemaps.js",
                         "~/js/infobox.js"));
 
