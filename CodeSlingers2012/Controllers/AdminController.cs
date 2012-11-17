@@ -69,13 +69,13 @@ namespace CodeSlingers2012.Controllers
             var model = new HomeViewModel();
 
             model.InitHomeViewModel();
-            model.nav.items = repo.GetSectionContentItems(SectionNames.Header);
-            model.homeImages.items = repo.GetSectionContentItems(SectionNames.HomeImages);
-            model.homeLinks.items = repo.GetSectionContentItems(SectionNames.HomeLinks);
-            model.menu.items = repo.GetSectionContentItems(SectionNames.Menu);
-            model.locations.items = repo.GetSectionContentItems(SectionNames.Location);
-            model.jobs.items = repo.GetSectionContentItems(SectionNames.Jobs);
-            model.footer.items = repo.GetSectionContentItems(SectionNames.Footer);
+            model.nav.items = MapSectionContent(repo.GetSectionContentItems(SectionNames.Header));
+            model.homeImages.items = MapSectionContent(repo.GetSectionContentItems(SectionNames.HomeImages));
+            model.homeLinks.items = MapSectionContent(repo.GetSectionContentItems(SectionNames.HomeLinks));
+            model.menu.items = MapSectionContent(repo.GetSectionContentItems(SectionNames.Menu));
+            model.locations.items = MapSectionContent(repo.GetSectionContentItems(SectionNames.Location));
+            model.jobs.items = MapSectionContent(repo.GetSectionContentItems(SectionNames.Jobs));
+            model.footer.items = MapSectionContent(repo.GetSectionContentItems(SectionNames.Footer));
 
             model.top = new TopViewModel();
             model.top.homeImages = model.homeImages;
@@ -84,5 +84,11 @@ namespace CodeSlingers2012.Controllers
             return model;
         }
 
+        private List<SectionContentModel> MapSectionContent(List<SectionContent> items)
+        {
+            var returnItem = new List<SectionContentModel>();
+            items.ForEach(i => returnItem.Add(i.ToSectionContentModel()));
+            return returnItem;
+        }
     }
 }

@@ -38,37 +38,37 @@ namespace CodeSlingers2012.Models
 
     public class PageNavViewModel
     {
-        public List<SectionContent> items { get; set; }
+        public List<SectionContentModel> items { get; set; }
     }
 
     public class HomeImageViewModel
     {
-        public List<SectionContent> items { get; set; }
+        public List<SectionContentModel> items { get; set; }
     }
 
     public class HomeLinkViewModel
     {
-        public List<SectionContent> items { get; set; }
+        public List<SectionContentModel> items { get; set; }
     }
 
     public class MenuViewModel
     {
-        public List<SectionContent> items { get; set; }
+        public List<SectionContentModel> items { get; set; }
     }
 
     public class LocationViewModel
     {
-        public List<SectionContent> items { get; set; }
+        public List<SectionContentModel> items { get; set; }
     }
 
     public class JobsViewModel
     {
-        public List<SectionContent> items { get; set; }
+        public List<SectionContentModel> items { get; set; }
     }
 
     public class FooterViewModel
     {
-        public List<SectionContent> items { get; set; }
+        public List<SectionContentModel> items { get; set; }
     }
 
 }
