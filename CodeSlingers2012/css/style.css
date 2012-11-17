@@ -351,7 +351,7 @@ header nav a.connect { padding-top: 21px; }
 	position: absolute;
 	top: 360px;
 	width: 100%;
-    z-index: 4;
+	z-index: 4;
 }
 #homerotatornav a {
 	display: block;
@@ -366,7 +366,7 @@ header nav a.connect { padding-top: 21px; }
 	position: absolute;
 	top: 531px;
 	width: 1267px;
-    z-index: 5;
+	z-index: 5;
 }
 #homecallouts article {
 	float: left;
@@ -593,7 +593,7 @@ width: 1400px;
 	background: url(../Images/jobs-bg.jpg) no-repeat;
 	height: 703px;
 	position: relative;
-	top: -16px;
+	top: -18px;
 	width: 1400px;
 }
 #jobs .callout {
@@ -602,38 +602,40 @@ width: 1400px;
 	height: 534px;
 	position: absolute;
 	right: 123px;
-	top: 79px;
+	top: 81px;
 	width: 534px;
 }
 .upper-frame img {
 	position: absolute;
-	top: -47px;
+	top: -45px;
 	z-index: 1;
 }
 .lower-frame img {
 	position: absolute;
-	top: 124px;
+	top: 126px;
 	left: 197px;
 	z-index: 2;
 }
 #jobs h2 {
 	color: #bd2424;
 	float: left;
-	margin: 16px 0 0 177px;
+	margin: 14px 0 0 175px;
 }
 #jobs p {
 	float: left;
 	text-align: center;
 	width: 406px;
-	margin: 17px 0 32px 74px;
+	margin: 17px 0 7px 71px;
 	font: 16px/24px 'OpenSansRegular';
 }
+
 #jobs button {
-	margin-left: 210px;
+	margin-left: 188px;
 	background-position: -114px 0;
 	float: left;
 	width: 140px;
 	letter-spacing: 1px;
+	margin-top: 24px;
 	border: none;
 	color: white;
 	font: 24px 'BebasNeueRegular';
@@ -691,7 +693,7 @@ width: 1400px;
 	color: white;
 	margin: 5px 0 0 115px;
 }
-#connect .twitter article.circle-3 p{
+#connect .twitter article.circle-3 p {
 	margin-top: 120px;
 }
 nav a.connect { padding-top: 21px; }
@@ -717,7 +719,6 @@ nav a.connect { padding-top: 21px; }
    float: left;
    left: 50%;
    position: absolute;
-   top: 30%;
 }
 #connect  div.circle-inner{
   text-align: justify;
