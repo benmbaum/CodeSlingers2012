@@ -8,6 +8,7 @@ using System.Web.Mvc;
 
 namespace CodeSlingers2012.Controllers
 {
+    [Authorize]
     public class AdminController : Controller
     {
         private HomeViewModel model;
