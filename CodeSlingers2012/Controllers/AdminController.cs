@@ -112,8 +112,8 @@ namespace CodeSlingers2012.Controllers
             model.footer.items = MapSectionContent(repo.GetSectionContentItems(SectionNames.Footer));
 
             model.top = new TopViewModel();
-            model.top.homeImages = model.homeImages;
-            model.top.homeLinks = model.homeLinks;
+            model.top.homeImages = model.homeImages.items;
+            model.top.homeLinks = model.homeLinks.items;
 
             return model;
         }

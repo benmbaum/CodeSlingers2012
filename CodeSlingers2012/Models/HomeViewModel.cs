@@ -33,8 +33,8 @@ namespace CodeSlingers2012.Models
 
     public class TopViewModel
     {
-        public HomeImageViewModel homeImages { get; set; }
-        public HomeLinkViewModel homeLinks { get; set; }
+        public List<SectionContentModel> homeImages { get; set; }
+        public List<SectionContentModel> homeLinks { get; set; }
     }
 
     public class PageNavViewModel

@@ -34,7 +34,7 @@ namespace CodeSlingers2012.Models
         [AllowHtml()]
         public string ContentText { get; set; }
         public string ContentTextLabel { 
-            get { return string.IsNullOrEmpty(ContentText) ? string.Empty : ContentText.Length > 100 ? ContentText.Substring(0, 99) + "..." : ContentText; } 
+            get { return string.IsNullOrEmpty(ContentText) ? string.Empty : ContentText.Length > 50 ? ContentText.Substring(0, 49) + "..." : ContentText; } 
         }
         
         [MaxLength(255)]
