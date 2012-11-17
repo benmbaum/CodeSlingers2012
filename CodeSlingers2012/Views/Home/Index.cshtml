@@ -1,43 +1,18 @@
-﻿@{
+﻿@model CodeSlingers2012.Models.HomeViewModel
+
+@{
     ViewBag.Title = "Codeslingers 2012";
+}
+
+@section nav {
+    @Html.DisplayFor(m => m.nav)
 }
 
 <div id="mainContainer">
     <section class="parallx_container" id="home">
-        <h1><img src="@Url.Content("~/Images/gts-logo.png")" alt="Good Time Sushi" />Good Time Sushi</h1>
-        <div id="homerotator" class="pics">
-            <img src="" alt="" />
-            <img src="" alt="" />
-            <img src="" alt="" />
-        </div>
-        <div id="homerotatornav">
-            <a href="#" id="prev">Prev</a>
-            <a href="#" id="next">Next</a>
-        </div>
-        <section id="homecallouts">
-            <article>
-                <title>Featured Roll</title>
-                <summary>
-                    Fusce et quam vel diam molestie eleifend et quis massa.
-                    <a href="#">Check Our Menu</a>
-                </summary>
-                <img src="" alt="" />
-            </article>
-            <article>
-                <title>Where Are We?</title>
-                <summary>
-                    Mauris elementum lobortis laoreet. Curabitur lacinia, metus sed suscipit ultrices, lacus ipsum adipiscing nisl.
-                    <a href="#">Find Your Location</a>
-                </summary>
-            </article>
-            <article>
-                <title>Work With Us</title>
-                <summary>
-                    Vestibulum vestibulum accumsan mollis. Quisque nec lacus ac dui porta pretium eget vitae leo.
-                    <a href="#">Apply Now!</a>
-                </summary>
-            </article>
-        </section>
+        <h1><img src="@Url.Content("~/Images/gts-logo.png")" alt="Good Time Sushi" /></h1>
+        @Html.DisplayFor(m => m.homeImages)
+        @Html.DisplayFor(m => m.homeLinks)
     </section>
 
     <section class="parallx_container" id="about-us">
@@ -58,6 +33,7 @@
             <img src="" alt="" />
         </section>
     </section>
+
     <section class="parallx_container" id="menu">
 
     </section>

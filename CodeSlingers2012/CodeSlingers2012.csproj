@@ -262,10 +262,15 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Web.config" />
+    <Content Include="Views\Shared\DisplayTemplates\PageNav.cshtml" />
+    <Content Include="Views\Shared\DisplayTemplates\PageNavItem.cshtml" />
+    <Content Include="Views\Shared\DisplayTemplates\HomeImage.cshtml" />
+    <Content Include="Views\Shared\DisplayTemplates\HomeLink.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Images\" />
+    <Folder Include="Views\Shared\EditorTemplates\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />

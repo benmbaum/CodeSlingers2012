@@ -15,17 +15,7 @@
     <body>
         <div id="wrapper">
             <header>
-                <nav>
-                    <ul>
-                        <li><a id="home" href="#">Home</a></li>
-                        <li><a id="about-us" href="#">About Us</a></li>
-                        <li><a id="menu" href="#">Menu</a></li>
-                        <li><span>Good Time Sushi</span></li>
-                        <li><a id="locations" href="#">Locations</a></li>
-                        <li><a id="jobs" href="#">Jobs</a></li>
-                        <li><a id="connect" href="#">Connect</a></li>
-                    </ul>
-                </nav>
+                @RenderSection("nav", required: true)
             </header>
 
             @RenderBody()
