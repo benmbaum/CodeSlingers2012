@@ -202,7 +202,7 @@ table {
 /* Text Styles
 -----------------------------------------*/
 h2 {
-	font: 64px/27px 'PacificoRegular';
+	font: 64px 'PacificoRegular';
 	color: #f54b4b;
 }
 h3 {
@@ -266,12 +266,11 @@ body {
 }
 #mainContainer {
 	margin: 0 auto;
-	width: 1401px;
+	width: 1398px;
 }
 header {
 	position: fixed;
 	top: 0;
-	left: 177px;
 	width: 1600px;
 	z-index: 200;
 }
@@ -387,7 +386,7 @@ nav a.connect { padding-top: 21px; }
 	margin-left: 24px;
 	position: relative;
 	z-index: 2;
-	}
+}
 #homecallouts article.featured summary {
 	width: 173px;
 	float: right;
@@ -417,6 +416,67 @@ nav a.connect { padding-top: 21px; }
 	width: 260px;
 }
 
+/* About Us
+------------------------------------------*/
+#about-us {
+	background: url(../Images/about-bg.jpg) no-repeat;
+	width: 100%;
+	position: relative;
+	height: 683px;
+}
+#about-content {
+	background: rgba(255,255,255,.5);
+	border-radius: 50%;
+	height:534px;
+	left: 270px;
+	position: relative;
+	width:534px;
+	top: 72px;
+	z-index: 2;
+}
+#left-roll {
+	position: absolute;
+	top: 148px;
+	z-index: 1;
+}
+#about-us h2 { 
+	float: left;
+	margin: 40px 0 0 137px;
+}
+#about-us p { 
+	margin: 0 56px;
+	text-align: center;
+	width: 425px;
+	float: left;
+}
+#about-content img {
+	margin: 24px 0 0 154px;
+}
+#right-roll {
+	top: 99px;
+	position: absolute;
+	right: 0;
+	width:601px;
+}
+#right-roll img {
+	float: left;
+	position: relative;
+}
+#right-roll img.sushi-top {
+	left: 164px;
+}
+#right-roll img.sushi-crab {
+	left: -69px;
+	top: 85px;
+}
+#right-roll img.sushi-rice {
+	top: 8px;
+	left: 59px;
+}
+#right-roll img.chopsticks {
+	left: 2px;
+	top: -8px;
+}
 /*-----------------------------------------------------------------------------------
  5. Conditional styles
 -----------------------------------------------------------------------------------*/
