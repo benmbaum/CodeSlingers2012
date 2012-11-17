@@ -64,7 +64,7 @@ namespace CodeSlingers2012.Controllers
         }
 
         [HttpGet]
-        public ActionResult EditFooter(int id)
+        public ActionResult EditContent(int id)
         {
             var repo = new Repository();
             var model = MapSectionContentItem(repo.GetSectionContentById(id));
@@ -72,11 +72,29 @@ namespace CodeSlingers2012.Controllers
         }
 
         [HttpPost]
-        public ActionResult EditFooter(SectionContentModel footerModel)
+        public ActionResult EditContent(SectionContentModel contentModel)
         {
             var repo = new Repository();
-            repo.SaveSectionContent(footerModel.ToSectionContent());
-            return RedirectToAction("Footer");
+            repo.SaveSectionContent(contentModel.ToSectionContent());
+
+            switch (contentModel.Section)
+            {
+                case SectionNames.Header:
+                    return RedirectToAction("Navigation");
+                case SectionNames.Footer:
+                    return RedirectToAction("Footer");
+                case SectionNames.HomeImages:
+                case SectionNames.HomeLinks:
+                    return RedirectToAction("Top");
+                case SectionNames.Jobs:
+                    return RedirectToAction("Jobs");
+                case SectionNames.Location:
+                    return RedirectToAction("Location");
+                case SectionNames.Menu:
+                    return RedirectToAction("Menu");
+                default:
+                    return RedirectToAction("Index");
+            }
         }
 
         private HomeViewModel BuildHomeModel()

@@ -6,7 +6,5 @@
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
 
-@using (Html.BeginForm())
-{
-    @Html.EditorFor(x => x)
-}
+<h2>Jobs</h2>
+    @Html.DisplayFor(i => i.items, "ContentAdmin")

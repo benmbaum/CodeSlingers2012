@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using CodeSlingers2012.Entities;
 
 namespace CodeSlingers2012.Models
 {
@@ -13,7 +14,7 @@ namespace CodeSlingers2012.Models
         public int Id { get; set; }
         
         [HiddenInput(DisplayValue = false)]
-        public int Section { get; set; }
+        public SectionNames Section { get; set; }
         
         [HiddenInput(DisplayValue = false)]
         public int? SubSection { get; set; }

@@ -13,7 +13,7 @@ namespace CodeSlingers2012.Models
             return new SectionContentModel()
                        {
                            Id = content.Id,
-                           Section = content.Section,
+                           Section = (SectionNames)content.Section,
                            SubSection = content.SubSection,
                            SectionId = content.SectionId,
                            Title = content.Title,
@@ -30,7 +30,7 @@ namespace CodeSlingers2012.Models
             return new SectionContent()
                        {
                            Id = content.Id,
-                           Section = content.Section,
+                           Section = (int)content.Section,
                            SubSection = content.SubSection,
                            SectionId = content.SectionId,
                            Title = content.Title,
