@@ -2,20 +2,35 @@
 
 <article class="left">
     <img src="@Url.Content("~/Images/gts-header.png")" />
-<img src="@Url.Content("~/Images/footer-sushi.png")" class="footer-sushi"/>
+    <img src="@Url.Content("~/Images/footer-sushi.png")" class="footer-sushi"/>
 </article>
-<article class="happy-hour">
-    <h3>Happy Hours</h3>
-    <p>Tues-Fri: 5-7pm</p>
-    <p>Plus Late Night</p>
-    <p>10-Close Tyes-Thurs</p>
-    <p>Sunday: 8 to 10pm</p>
-</article>
-<article class="dinner">
-    <h3>Dinner</h3>
-    <p>Mon: 5-9pm</p>
-    <p>Tues-Thurs: 5-10pm</p>
-    <p>Fri-Sat: 5-10:30pm</p>
-    <p>Sun: 5-9pm</p>
-</article>
-<a href="#" class="back-to-top">Back to Top</a>
+
+
+@foreach (var item in Model.items)
+{
+    var className = string.Empty;
+    switch (item.SectionId)
+    {
+        case 1:
+            className = "dinner";
+            break;
+        case 2:
+            className = "happy-hour";
+            break;
+        case 3:
+            className = "back-to-top";
+            break;
+    }
+
+    if (item.SectionId < 3)
+    {
+        <article class="@className">
+            <h3>@item.Title</h3>
+            @Html.Raw(item.ContentText)
+        </article>
+    }
+    else
+    {
+        <a href="@item.ContentUrl" class="@className">@item.ContentUrlText</a>
+    }
+}
