@@ -16,5 +16,46 @@ namespace CodeSlingers2012.Controllers
             return View();
         }
 
+        [HttpGet]
+        public ActionResult Navigation()
+        {
+
+            return View();
+        }
+
+        [HttpGet]
+        public ActionResult Top()
+        {
+
+            return View();
+        }
+
+        [HttpGet]
+        public ActionResult Menu()
+        {
+
+            return View();
+        }
+
+        [HttpGet]
+        public ActionResult Location()
+        {
+
+            return View();
+        }
+
+        [HttpGet]
+        public ActionResult Jobs()
+        {
+
+            return View();
+        }
+
+        [HttpGet]
+        public ActionResult Footer()
+        {
+
+            return View();
+        }
     }
 }
