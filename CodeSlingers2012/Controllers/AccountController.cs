@@ -14,7 +14,6 @@ using CodeSlingers2012.Models;
 namespace CodeSlingers2012.Controllers
 {
     [Authorize]
-    [InitializeSimpleMembership]
     public class AccountController : Controller
     {
         //
@@ -35,9 +34,33 @@ namespace CodeSlingers2012.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Login(LoginModel model, string returnUrl)
         {
-            if (ModelState.IsValid && WebSecurity.Login(model.UserName, model.Password, persistCookie: model.RememberMe))
+            //if (ModelState.IsValid && WebSecurity.Login(model.UserName, model.Password, persistCookie: model.RememberMe))
+            //{
+            //    return RedirectToLocal(returnUrl);
+            //}
+
+            if (ModelState.IsValid && model.UserName.ToLower().Equals("admin") && model.Password.Equals("b"))
             {
-                return RedirectToLocal(returnUrl);
+                var ticket = new FormsAuthenticationTicket(
+                    1,                                     // ticket version
+                    model.UserName,                              // authenticated username
+                    DateTime.Now,                          // issueDate
+                    DateTime.Now.AddMinutes(30),           // expiryDate
+                    true,                          // true to persist across browser sessions
+                    "ApplicationSpecific data for this user.",                              // can be used to store additional user data
+                    FormsAuthentication.FormsCookiePath);  // the path for the cookie
+
+                // Encrypt the ticket using the machine key
+                var encryptedTicket = FormsAuthentication.Encrypt(ticket);
+
+                // Add the cookie to the request to save it
+                var cookie = new HttpCookie(FormsAuthentication.FormsCookieName, encryptedTicket);
+                cookie.HttpOnly = true;
+                Response.Cookies.Add(cookie);
+
+                return Redirect(returnUrl);
+                //return RedirectToAction("Index", "Admin");
+
             }
 
             // If we got this far, something failed, redisplay form
