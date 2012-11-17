@@ -495,6 +495,9 @@ nav a.connect { padding-top: 21px; }
 	position: relative;
 	top: -16px;
 }
+#map_canvas {
+    height: 701px;
+}
 #circles .top-half {
 	background: url(../Images/half-circle-top.png) no-repeat;
 	height: 138px;
@@ -543,7 +546,6 @@ nav a.connect { padding-top: 21px; }
 	right: 225px;
 	z-index: 3;
 }
-
 /* Jobs
 ------------------------------------------*/
 #jobs {
@@ -640,15 +642,13 @@ nav a.connect { padding-top: 21px; }
 	color: white;
 	text-align: center;
 	width: 253px;
-	margin: 93px 43px 0;
 }
 #connect .twitter article span {
 	font: 12px 'OpenSansBold';
 	color: white;
-	margin: 5px 0 0 115px;
-}
-#connect .twitter article.circle-3 p{
-	margin-top: 120px;
+	margin: 5px auto 0 auto;
+    width: 112px;
+    display: block;
 }
 #connect .ig {
 	position:absolute;
@@ -656,6 +656,19 @@ nav a.connect { padding-top: 21px; }
 	height: 150px;
 	bottom: 0;
 	width:100%;
+}
+div.circle-outer{
+    margin: 0 auto;
+    float: left;
+    left: 50%;
+    position: absolute;
+    top: 30%;
+}
+div.circle-inner{
+    text-align: justify;
+    float: left;
+    position: relative;
+    right: 50%;
 }
 
 /* Footer

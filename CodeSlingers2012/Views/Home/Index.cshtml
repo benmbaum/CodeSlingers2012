@@ -5,14 +5,14 @@
 }
 
 @section nav {
-    @Html.DisplayFor(m => m.nav, "PageNav");
+    @Html.DisplayFor(m => m.nav, "PageNav")
 }
 
 <div id="mainContainer">
     <section class="parallx_container" id="home">
         <h1><img src="@Url.Content("~/Images/gts-logo.png")" alt="Good Time Sushi" /></h1>
-        @Html.DisplayFor(m => m.homeImages, "HomeImage");
-        @Html.DisplayFor(m => m.homeLinks, "HomeLink");
+        @Html.DisplayFor(m => m.homeImages, "HomeImage")
+        @Html.DisplayFor(m => m.homeLinks, "HomeLink")
     </section>
     <section class="parallx_container" id="about-us">
         @{ Html.RenderPartial("DisplayTemplates/About"); }
@@ -21,15 +21,15 @@
         
     </section>
     <section class="parallx_container" id="locations">
-        @Html.DisplayFor(m => m.locations, "Locations");
+        @Html.DisplayFor(m => m.locations, "Locations")
     </section>
     <section class="parallx_container" id="jobs">
-        @Html.DisplayFor(m => m.jobs, "Jobs");
+        @Html.DisplayFor(m => m.jobs, "Jobs")
     </section>
     <section class="parallx_container" id="connect">
         @{ Html.RenderPartial("DisplayTemplates/Connect"); }
     </section>
     <footer class="parallx_container">
-        @Html.DisplayFor(m => m.footer, "Footer");
+        @Html.DisplayFor(m => m.footer, "Footer")
     </footer>
 </div>
