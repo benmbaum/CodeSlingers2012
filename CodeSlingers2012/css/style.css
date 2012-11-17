@@ -237,12 +237,12 @@ ol { list-style-type: decimal; }
 .prev {
 	background-position: 0 0;
 	float: left;
-	margin-left: 19px;
+	margin-left: 18px;
 }
 .next {
 	background-position: -46px 0;
 	float:right;
-	margin-right:19px;
+	margin-right:20px;
 }
 
 /*-----------------------------------------------------------------------------------
@@ -252,13 +252,11 @@ html {
 	background: url(../Images/repeat-bg.png) center 0 repeat;
 	border: 1px solid #4c4c4c;
 	height: 4621px;
-	width: 100%;
 }
 body { 
 	background: url(../Images/static-bg.png) center 0 repeat-y;
 	height: 100%;
 	margin: 0 auto;
-	width: 1598px;
 }
 #wrapper { 
 	margin: 0 auto;
@@ -273,7 +271,6 @@ body {
 header {
 	position: fixed;
 	top: 0;
-	width: 1600px;
 	z-index: 200;
 }
 
@@ -289,19 +286,19 @@ header li span {
 	width: 313px;
 	text-indent: -9999px;
 }
-nav {
+header nav {
 	background: url(../Images/nav.png) no-repeat;
 	height: 99px;
 	width: 1401px;
 }
-nav ul {
+header nav ul {
 	margin-left: 243px;
 	padding-top: 8px;
 }
-nav li {
+header nav li {
 	float: left;
 }
-nav a {
+header nav a {
 	font: 24px/18px 'BebasNeueRegular';
 	color: #ffffff;
 	display:block;
@@ -309,33 +306,33 @@ nav a {
 	padding-top: 20px;
 	text-decoration: none;
 }
-nav a.current {
+header nav a.current, header nav a:hover {
 	color: #ffcccc;
 }
-nav a.home { margin-right: 54px; }
-nav a.about-us { margin-right: 50px; }
-nav a.menu { margin-right: 38px; }
-nav a.locations { 
+header nav a.home { margin-right: 54px; }
+header nav a.about-us { margin-right: 50px; }
+header nav a.menu { margin-right: 38px; }
+header nav a.locations { 
 	margin: 0 44px 0 24px;
 	padding-top: 21px;
 }
-nav a.jobs { 
+header nav a.jobs { 
 	margin-right: 44px;
 	padding-top: 21px;
 }
-nav a.connect { padding-top: 21px; }
+header nav a.connect { padding-top: 21px; }
 
 /* Homepage
 ------------------------------------------*/
 #home {
 	background: #000;
-	height: 733px;
+	height: 732px;
 	position: relative;
 }
 #home h1 {
 	position: absolute;
-	top:126px;
-	left: 220px;
+	top:121px;
+	left: 213px;
 	z-index: 1;
 	text-indent: -999px;
 	width: 497px;
@@ -345,6 +342,10 @@ nav a.connect { padding-top: 21px; }
 }
 #homerotator {
 	height: 100%;
+}
+#homerotator img {
+	position: relative;
+	top: -3px;
 }
 #homerotatornav {
 	position: absolute;
@@ -359,32 +360,32 @@ nav a.connect { padding-top: 21px; }
 }
 #homecallouts {
 	background: rgba(0,0,0,.4);
-	height: 201px;
-	padding-left: 200px;
+	height: 203px;
+	padding-left: 132px;
 	position: absolute;
-	top: 533px;
-	width: 1200px;
+	top: 531px;
+	width: 1267px;
 }
 #homecallouts article {
 	float: left;
 	width:302px;
-	margin-left: 65px;
+	margin-left: 59px;
 }
 
 #homecallouts article title {
 	display: block;
 	font: 34px/24px 'PacificoRegular';
 	color: #ffffff;
-	margin-top: 21px;
+	margin-top: 24px;
 }
 #homecallouts article summary {
 	font: 16px/24px 'OpenSansBold';
 	color: white;
 	display: block;
-	margin-top: 21px;
+	margin-top: 24px;
 }
 #homecallouts article.featured title { 
-	margin-left: 24px;
+	margin-left: 30px;
 	position: relative;
 	z-index: 2;
 }
@@ -395,14 +396,21 @@ nav a.connect { padding-top: 21px; }
 #homecallouts article.featured img {
 	z-index: 1;
 	position: relative;
-	top: -8px;
+	top: -10px;
 }
 #homecallouts article summary a {
 	display: block;
 	text-decoration: none;
 	color: #ef3b3b;
+	margin-left: 6px;
+	margin-top: 1px;
 }
-
+#homecallouts article summary a:hover{
+	color: #fff000;
+}
+#homecallouts article summary a:active{
+	color: #ef3b3b;
+}
 #homecallouts article summary a span {
 	padding-right: 8px;
 	display: inline-block;
@@ -412,16 +420,23 @@ nav a.connect { padding-top: 21px; }
 }
 #homecallouts article.where-are-we {
 	width: 260px;
+	margin-left: 46px;
 }
 #homecallouts article.where-are-we summary {
 	width: 260px;
+	margin-left: 5px;
+}
+#homecallouts article.where-are-we summary a { margin-left: 5px; }
+#homecallouts article.work-with-us{ width: 267px; }
+#homecallouts article.work-with-us summary {
+	margin-left: 5px;
 }
 
 /* About Us
 ------------------------------------------*/
 #about-us {
 	background: url(../Images/about-bg.jpg) no-repeat;
-	width: 100%;
+	width: 1400px;
 	position: relative;
 	height: 700px;
 }
@@ -437,24 +452,24 @@ nav a.connect { padding-top: 21px; }
 }
 #left-roll {
 	position: absolute;
-	top: 148px;
+	top: 141px;
 	z-index: 1;
 }
 #about-us h2 { 
 	float: left;
-	margin: 40px 0 0 137px;
+	margin: 37px 0 0 137px;
 }
 #about-us p { 
-	margin: 0 56px;
+	margin: -3px 55px 0;
 	text-align: center;
 	width: 425px;
 	float: left;
 }
 #about-content img {
-	margin: 24px 0 0 154px;
+	margin: 14px 0 0 154px;
 }
 #right-roll {
-	top: 99px;
+	top: 98px;
 	position: absolute;
 	right: 0;
 	width:601px;
@@ -464,19 +479,19 @@ nav a.connect { padding-top: 21px; }
 	position: relative;
 }
 #right-roll img.sushi-top {
-	left: 164px;
+	left: 166px;
 }
 #right-roll img.sushi-crab {
-	left: -69px;
-	top: 85px;
+	left: -78px;
+	top: 84px;
 }
 #right-roll img.sushi-rice {
-	top: 8px;
-	left: 59px;
+	top: 9px;
+	left: 50px;
 }
 #right-roll img.chopsticks {
 	left: 2px;
-	top: -8px;
+	top: -15px;
 }
 
 /* Menu
@@ -485,8 +500,19 @@ nav a.connect { padding-top: 21px; }
 	background: url(../Images/menu-bg.png) no-repeat;
 	height: 718px;
 	position: relative;
-	top: -16px;
-	width: 100%;
+	top: -18px;
+	width: 1400px;
+}
+#menu nav {
+	background: none;
+}
+#menu nav a{
+	font-size: 32px;
+	color: #fff000;
+	margin-right: 51px;
+}
+#menu nav a.current {
+	color: white;
 }
 
 /* Locations
@@ -495,10 +521,7 @@ nav a.connect { padding-top: 21px; }
 	background: #f0ede4;
 	height: 701px;
 	position: relative;
-	top: -16px;
-}
-#map_canvas {
-    height: 701px;
+	top: -18px;
 }
 #circles .top-half {
 	background: url(../Images/half-circle-top.png) no-repeat;
@@ -548,6 +571,7 @@ nav a.connect { padding-top: 21px; }
 	right: 225px;
 	z-index: 3;
 }
+
 /* Jobs
 ------------------------------------------*/
 #jobs {
@@ -644,13 +668,15 @@ nav a.connect { padding-top: 21px; }
 	color: white;
 	text-align: center;
 	width: 253px;
+	margin: 93px 43px 0;
 }
 #connect .twitter article span {
 	font: 12px 'OpenSansBold';
 	color: white;
-	margin: 5px auto 0 auto;
-    width: 112px;
-    display: block;
+	margin: 5px 0 0 115px;
+}
+#connect .twitter article.circle-3 p{
+	margin-top: 120px;
 }
 #connect .ig {
 	position:absolute;
@@ -658,19 +684,6 @@ nav a.connect { padding-top: 21px; }
 	height: 150px;
 	bottom: 0;
 	width:100%;
-}
-div.circle-outer{
-    margin: 0 auto;
-    float: left;
-    left: 50%;
-    position: absolute;
-    top: 30%;
-}
-div.circle-inner{
-    text-align: justify;
-    float: left;
-    position: relative;
-    right: 50%;
 }
 
 /* Footer
