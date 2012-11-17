@@ -6,4 +6,7 @@
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
 
-<h2>Jobs</h2>
+@using (Html.BeginForm())
+{
+    @Html.EditorFor(x => x)
+}

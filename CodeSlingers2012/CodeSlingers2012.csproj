@@ -191,6 +191,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountModels.cs" />
+    <Compile Include="Models\ExtensionMethods.cs" />
     <Compile Include="Models\HomeViewModel.cs" />
     <Compile Include="Models\SectionContentModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -288,6 +289,7 @@
     <Content Include="Views\Shared\DisplayTemplates\Connect.cshtml" />
     <Content Include="Views\Shared\DisplayTemplates\Footer.cshtml" />
     <Content Include="Views\Shared\DisplayTemplates\About.cshtml" />
+    <Content Include="Views\Shared\EditorTemplates\Jobs.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Shared\_AdminLayout.cshtml" />
@@ -298,7 +300,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Shared\EditorTemplates\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Admin\Index.cshtml" />
