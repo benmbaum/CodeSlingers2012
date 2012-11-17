@@ -74,6 +74,8 @@ namespace CodeSlingers2012.Controllers
         [HttpPost]
         public ActionResult EditFooter(SectionContentModel footerModel)
         {
+            var repo = new Repository();
+            repo.SaveSectionContent(footerModel.ToSectionContent());
             return RedirectToAction("Footer");
         }
 
