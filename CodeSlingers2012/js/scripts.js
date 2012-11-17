@@ -1,5 +1,14 @@
 (function(nsRoot) {
     nsRoot.Codeslinger = nsRoot.Codeslinger || {};
+
+    Codeslinger.ImageRotator = function() {
+        $('#homerotator').cycle({
+            fx: 'scrollLeft',
+            timeout: 5000,
+            next: '.next',
+            prev: '.prev'
+        });
+    };
     
     Codeslinger.myMapOptions = {
         zoom: 11,
@@ -109,13 +118,27 @@
         });
     };
 
-    Codeslinger.filterPath = function(string) {
-        return string
-            .replace(/^\//, '')
-            .replace(/(index|default).[a-zA-Z]{3,4}$/, '')
-            .replace(/\/$/, '');
+    Codeslinger.InitVideo = function() {
+        $("#dialog-modal-video").dialog({
+            autoOpen: false,
+            modal: true
+        });
+
+        $('.ui-dialog').find('button:contains("Close")').addClass('ui-icon-circle-close');
+
+        $("#video-opener").click(function() {
+            $("#dialog-modal-video").dialog("open");
+            return false;
+        });
+
     };
-    
+
+Codeslinger.filterPath = function(string) {
+    return string
+        .replace(/^\//, '')
+        .replace(/(index|default).[a-zA-Z]{3,4}$/, '')
+        .replace(/\/$/, '');
+};
     Codeslinger.scrollableElement = function(els) {
         for (var i = 0, argLength = arguments.length; i < argLength; i++) {
             var el = arguments[i],
@@ -167,9 +190,11 @@
 
 })(window);
 
-$(function() {
+$(function () {
+    Codeslinger.ImageRotator();
     Codeslinger.MapAddress('1000 Nicollet Mall Minneapolis, MN 55403');
     Codeslinger.MapAddress('4008 7th St W St Paul, MN 55116');
     Codeslinger.GetTweets();
     Codeslinger.GetIG();
+    Codeslinger.InitVideo();
 });

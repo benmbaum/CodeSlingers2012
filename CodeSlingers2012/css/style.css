@@ -351,6 +351,7 @@ header nav a.connect { padding-top: 21px; }
 	position: absolute;
 	top: 360px;
 	width: 100%;
+    z-index: 4;
 }
 #homerotatornav a {
 	display: block;
@@ -365,6 +366,7 @@ header nav a.connect { padding-top: 21px; }
 	position: absolute;
 	top: 531px;
 	width: 1267px;
+    z-index: 5;
 }
 #homecallouts article {
 	float: left;
@@ -522,14 +524,19 @@ header nav a.connect { padding-top: 21px; }
 	height: 701px;
 	position: relative;
 	top: -18px;
+	width: 1400px;
 }
+#map_canvas {
+ height: 701px;
+width: 1400px;
+ }
 #circles .top-half {
 	background: url(../Images/half-circle-top.png) no-repeat;
 	height: 138px;
 	width: 325px;
 	position: absolute;
-	top: 0;
-	right: 225px;
+	top: -1px;
+	right: 226px;
 	z-index: 1;
 }
 #circles .bottom-half {
@@ -544,30 +551,38 @@ header nav a.connect { padding-top: 21px; }
 #circles .mpls {
 	background: rgba(199,46,46,.8);
 	border-radius: 50%;
-	height: 329px;
-	width: 329px;
+	height: 328px;
+	width: 328px;
 	position: absolute;
-	top: 64px;
+	top: 62px;
 	right: 225px;
 	z-index: 2;
 }
 #circles h3 {
-	margin: 100px 58px 35px;
+	margin: 93px 52px 29px;
+}
+#circles .stp h3 {
+	margin-left: 67px;
+	margin-top: 94px;
+	margin-bottom: 27px;
+} 
+#circles .stp p {
+	margin-left: -4px;
 }
 #circles p {
 	font: 30px/28px 'BebasNeueRegular';
 	text-transform: uppercase;
 	color: white;
-	margin-left: 2px;
+	margin-left: -2px;
 	text-align: center;
 }
 #circles .stp {
 	background: rgba(199,46,46,.8);
 	border-radius: 50%;
-	height: 329px;
-	width: 329px;
+	height: 328px;
+	width: 328px;
 	position: absolute;
-	top: 320px;
+	top: 319px;
 	right: 225px;
 	z-index: 3;
 }
@@ -579,6 +594,7 @@ header nav a.connect { padding-top: 21px; }
 	height: 703px;
 	position: relative;
 	top: -16px;
+	width: 1400px;
 }
 #jobs .callout {
 	background: rgba(216,172,116,.8);
@@ -591,13 +607,13 @@ header nav a.connect { padding-top: 21px; }
 }
 .upper-frame img {
 	position: absolute;
-	top: -37px;
+	top: -47px;
 	z-index: 1;
 }
 .lower-frame img {
 	position: absolute;
-	top: 147px;
-	left: 216px;
+	top: 124px;
+	left: 197px;
 	z-index: 2;
 }
 #jobs h2 {
@@ -678,22 +694,36 @@ header nav a.connect { padding-top: 21px; }
 #connect .twitter article.circle-3 p{
 	margin-top: 120px;
 }
+nav a.connect { padding-top: 21px; }
 #connect .ig {
 	position:absolute;
 	background: #ffffff;
 	height: 150px;
 	bottom: 0;
 	width:1400px;
-    overflow: hidden;
+   overflow: hidden;
 }
 #connect .ig ul {
-    width: 1500px;
+   width: 1500px;
 }
 #connect .ig ul li {
-    display: block;
-    float: left;
-    width: 150px;
+   display: block;
+   float: left;
+   width: 150px;
     height: 150px;
+ }
+#connect  div.circle-outer{
+   margin: 0 auto;
+   float: left;
+   left: 50%;
+   position: absolute;
+   top: 30%;
+}
+#connect  div.circle-inner{
+  text-align: justify;
+  float: left;
+  position: relative;
+  right: 50%;
 }
 
 /* Footer
