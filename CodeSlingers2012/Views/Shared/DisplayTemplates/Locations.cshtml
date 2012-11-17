@@ -6,24 +6,24 @@
     </article>
     <article id="circles">
         <div class="top-half"></div>
-        <div class="mpls">
-            <h3>
-                Minneapolis
-            </h3>
-            <p>
-                1000 Nicollet Mall<br/>
-                Minneapolis MN 55401<br/>
-                (612) 123-4567
-            </p>
-        </div>
-        <div class="stp">
-            <h3>St. Paul</h3>
-            <p>
-                4008 W 7TH<br/>
-                St. Paul MN 55401<br/>
-                (651) 123-4567
-            </p>
-        </div>
+        @foreach (var item in Model.items)
+        {
+            var className = string.Empty;
+            switch (item.SectionId)
+            {
+                case 1:
+                    className = "mpls";
+                    break;
+                case 2:
+                    className = "stp";
+                    break;
+            }
+            <div class="@className">
+                <h3>@item.Title</h3>
+                @Html.Raw(item.ContentText)
+            </div>
+            @Html.Hidden("location" + className, item.ContentText.Replace("<p>", "").Replace("</p>", "").Replace("<br/>", " ").Replace("<P>", "").Replace("</P>", "").Replace("<BR/>", " "))
+        }
         <div class="bottom-half"></div>
     </article>
 </section>

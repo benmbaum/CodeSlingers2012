@@ -52,7 +52,7 @@
         Codeslinger.currentMap.setCenter(point);
 
         var marker = new google.maps.Marker({
-            draggable: true,
+            draggable: false,
             raiseOnDrag: false,
             icon: Codeslinger.image,
             shadow: Codeslinger.shadow,
@@ -202,8 +202,10 @@ Codeslinger.filterPath = function(string) {
 
 $(function () {
     Codeslinger.ImageRotator();
-    Codeslinger.MapAddress('1000 Nicollet Mall Minneapolis, MN 55403');
-    Codeslinger.MapAddress('4008 7th St W St Paul, MN 55116');
+    var loc1 = $('input:hidden["locations_locationmlps"]').val();
+    var loc2 = $('#locations_locationstp').val();
+    Codeslinger.MapAddress(loc1);
+    Codeslinger.MapAddress(loc2);
     Codeslinger.GetTweets();
     Codeslinger.GetIG();
     Codeslinger.InitVideo();
