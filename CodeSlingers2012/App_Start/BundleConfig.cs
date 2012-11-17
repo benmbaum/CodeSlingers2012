@@ -30,6 +30,10 @@ namespace CodeSlingers2012
 
             bundles.Add(new StyleBundle("~/css").Include("~/css/style.css"));
 
+            bundles.Add(new StyleBundle("~/admincss").Include(
+                        "~/css/bootstrap.css", 
+                        "~/css/admin.css"));
+
             bundles.Add(new StyleBundle("~/Content/themes/base/css").Include(
                         "~/Content/themes/base/jquery.ui.core.css",
                         "~/Content/themes/base/jquery.ui.resizable.css",
