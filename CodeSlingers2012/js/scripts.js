@@ -1,5 +1,14 @@
 (function(nsRoot) {
     nsRoot.Codeslinger = nsRoot.Codeslinger || {};
+
+    Codeslinger.ImageRotator = function() {
+        $('#homerotator').cycle({
+            fx: 'scrollLeft',
+            timeout: 5000,
+            next: '.next',
+            prev: '.prev'
+        });
+    };
     
     Codeslinger.myMapOptions = {
         zoom: 11,
@@ -126,7 +135,8 @@
     
 })(window);
 
-$(function() {
+$(function () {
+    Codeslinger.ImageRotator();
     Codeslinger.MapAddress('1000 Nicollet Mall Minneapolis, MN 55403');
     Codeslinger.MapAddress('4008 7th St W St Paul, MN 55116');
     Codeslinger.GetTweets();

@@ -292,6 +292,8 @@
     <Content Include="Images\glyphicons-halflings.png" />
     <Content Include="Images\gts-header.png" />
     <Content Include="Images\gts-logo.png" />
+    <Content Include="Images\half-circle-bottom.png" />
+    <Content Include="Images\half-circle-top.png" />
     <Content Include="Images\jobs-bg.jpg" />
     <Content Include="Images\map-pin-shadow.png" />
     <Content Include="Images\map-pin.png" />
@@ -311,10 +313,12 @@
     <Content Include="Images\sushi-crab-top.png" />
     <Content Include="Images\sushi-rice.png" />
     <Content Include="Images\sushi.png" />
+    <Content Include="Images\twitter-circle.png" />
     <Content Include="Images\video-thumbnail.png" />
     <Content Include="js\googlemaps.js" />
     <Content Include="js\ig-min.js" />
     <Content Include="js\infobox.js" />
+    <Content Include="js\jquery.cycle.all.js" />
     <Content Include="js\scripts.js" />
     <Content Include="js\plugins.js" />
     <Content Include="Scripts\bootstrap.js" />
