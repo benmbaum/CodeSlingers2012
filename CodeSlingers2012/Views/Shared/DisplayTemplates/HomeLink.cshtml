@@ -1,26 +1,29 @@
 ﻿@model CodeSlingers2012.Models.HomeLinkViewModel
 
 <section id="homecallouts">
-    <article class="featured">
-        <title>Featured Roll</title>
-        <summary>
-            Fusce et quam vel diam molestie eleifend et quis massa.
-            <a href="#"><span></span>Check Our Menu</a>
-        </summary>
-        <img src="@Url.Content("~/Images/sushi.png")" alt="Sushi" />
-    </article>
-    <article class="where-we-are">
-        <title>Where Are We?</title>
-        <summary>
-            Mauris elementum lobortis laoreet. Curabitur lacinia, metus sed suscipit ultrices, lacus ipsum adipiscing nisl.
-            <a href="#"><span></span>Find Your Location</a>
-        </summary>
-    </article>
-    <article class="work-with-us">
-        <title>Work With Us</title>
-        <summary>
-            Vestibulum vestibulum accumsan mollis. Quisque nec lacus ac dui porta pretium eget vitae leo.
-            <a href="#"><span></span>Apply Now!</a>
-        </summary>
-    </article>
+        @foreach (var item in Model.items)
+        {
+            var className = string.Empty;
+            switch (item.SectionId)
+            {
+                case 1:
+                    className = "featured";
+                    break;
+                case 2:
+                    className = "where-we-are";
+                    break;
+                case 3:
+                    className = "work-with-us";
+                    break;
+            }
+
+            <article class="@className">
+                <title>@item.Title</title>
+                <summary>
+                    @item.ContentText
+                    <a href="@item.ContentUrl"><span></span>@item.ContentUrlText</a>
+                </summary>
+                @if (!string.IsNullOrEmpty(item.ImageUrl)) { <img src="@item.ImageUrl")" alt="Sushi" /> }
+            </article>
+        }
 </section>

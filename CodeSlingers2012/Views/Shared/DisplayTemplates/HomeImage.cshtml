@@ -1,9 +1,10 @@
 ﻿@model CodeSlingers2012.Models.HomeImageViewModel
 
 <div id="homerotator" class="pics">
-    <img src="@Url.Content("~/Images/slide-img1.jpg")" alt="Sushi!" />
-    <img src="@Url.Content("~/Images/slide-img2.jpg")" alt="Sushi!" />
-    <img src="@Url.Content("~/Images/slide-img3.jpg")" alt="Sushi!" />
+            @foreach (var item in Model.items)
+            {
+                <img src="@item.ImageUrl" alt="Sushi!" />
+            }
 </div>
 <div id="homerotatornav">
     <a href="#" class="prev">Prev</a>
