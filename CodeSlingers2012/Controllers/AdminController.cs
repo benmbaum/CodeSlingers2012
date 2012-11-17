@@ -63,6 +63,20 @@ namespace CodeSlingers2012.Controllers
             return View(model.footer);
         }
 
+        [HttpGet]
+        public ActionResult EditFooter(int id)
+        {
+            var repo = new Repository();
+            var model = MapSectionContentItem(repo.GetSectionContentById(id));
+            return View("ContentEdit", model);
+        }
+
+        [HttpPost]
+        public ActionResult EditFooter(SectionContentModel footerModel)
+        {
+            return RedirectToAction("Footer");
+        }
+
         private HomeViewModel BuildHomeModel()
         {
             var repo = new Repository();
@@ -90,5 +104,11 @@ namespace CodeSlingers2012.Controllers
             items.ForEach(i => returnItem.Add(i.ToSectionContentModel()));
             return returnItem;
         }
+
+        private SectionContentModel MapSectionContentItem(SectionContent item)
+        {
+            return item.ToSectionContentModel();
+        }
+
     }
 }

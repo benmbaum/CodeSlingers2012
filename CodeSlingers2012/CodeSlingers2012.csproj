@@ -290,6 +290,8 @@
     <Content Include="Views\Shared\DisplayTemplates\Footer.cshtml" />
     <Content Include="Views\Shared\DisplayTemplates\About.cshtml" />
     <Content Include="Views\Shared\EditorTemplates\Jobs.cshtml" />
+    <Content Include="Views\Shared\DisplayTemplates\FooterAdmin.cshtml" />
+    <Content Include="Views\Admin\ContentEdit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Shared\_AdminLayout.cshtml" />

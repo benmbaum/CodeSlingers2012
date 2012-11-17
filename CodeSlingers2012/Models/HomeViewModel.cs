@@ -1,4 +1,5 @@
 ﻿using CodeSlingers2012.Entities;
+using System.ComponentModel.DataAnnotations;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -68,6 +69,7 @@ namespace CodeSlingers2012.Models
 
     public class FooterViewModel
     {
+        [UIHint("SectionContent")]
         public List<SectionContentModel> items { get; set; }
     }
 

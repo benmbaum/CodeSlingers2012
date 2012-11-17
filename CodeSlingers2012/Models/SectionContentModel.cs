@@ -30,7 +30,11 @@ namespace CodeSlingers2012.Models
         
         [MaxLength(1000)]
         [DisplayFormat(NullDisplayText = "")]
+        [AllowHtml()]
         public string ContentText { get; set; }
+        public string ContentTextLabel { 
+            get { return string.IsNullOrEmpty(ContentText) ? string.Empty : ContentText.Length > 100 ? ContentText.Substring(0, 99) + "..." : ContentText; } 
+        }
         
         [MaxLength(255)]
         [DisplayFormat(NullDisplayText = "")]
