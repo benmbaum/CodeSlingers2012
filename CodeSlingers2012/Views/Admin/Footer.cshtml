@@ -5,4 +5,9 @@
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
 
-<h2>Footer</h2>
+@using (Html.BeginForm("Edit", "Footer", FormMethod.Post)) {
+    <h2>Footer</h2>
+
+
+    <input type="submit" value="Save" />
+}
