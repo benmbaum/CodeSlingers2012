@@ -524,6 +524,10 @@ header nav a.connect { padding-top: 21px; }
 	top: -18px;
 	width: 1400px;
 }
+-#map_canvas {
+ height: 701px;
+width: 1400px;
+ }
 #circles .top-half {
 	background: url(../Images/half-circle-top.png) no-repeat;
 	height: 138px;
@@ -553,13 +557,21 @@ header nav a.connect { padding-top: 21px; }
 	z-index: 2;
 }
 #circles h3 {
-	margin: 93px 51px 35px;
+	margin: 93px 52px 29px;
+}
+#circles .stp h3 {
+	margin-left: 67px;
+	margin-top: 94px;
+	margin-bottom: 27px;
+} 
+#circles .stp p {
+	margin-left: -4px;
 }
 #circles p {
 	font: 30px/28px 'BebasNeueRegular';
 	text-transform: uppercase;
 	color: white;
-	margin-left: 2px;
+	margin-left: -2px;
 	text-align: center;
 }
 #circles .stp {
@@ -580,6 +592,7 @@ header nav a.connect { padding-top: 21px; }
 	height: 703px;
 	position: relative;
 	top: -16px;
+	width: 1400px;
 }
 #jobs .callout {
 	background: rgba(216,172,116,.8);
@@ -592,13 +605,13 @@ header nav a.connect { padding-top: 21px; }
 }
 .upper-frame img {
 	position: absolute;
-	top: -37px;
+	top: -47px;
 	z-index: 1;
 }
 .lower-frame img {
 	position: absolute;
-	top: 147px;
-	left: 216px;
+	top: 124px;
+	left: 197px;
 	z-index: 2;
 }
 #jobs h2 {
@@ -685,6 +698,19 @@ header nav a.connect { padding-top: 21px; }
 	height: 150px;
 	bottom: 0;
 	width:100%;
+}
+div.circle-outer{
+   margin: 0 auto;
+   float: left;
+   left: 50%;
+   position: absolute;
+   top: 30%;
+}
+div.circle-inner{
+  text-align: justify;
+  float: left;
+  position: relative;
+  right: 50%;
 }
 
 /* Footer
