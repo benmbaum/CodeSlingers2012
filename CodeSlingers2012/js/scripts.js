@@ -120,9 +120,19 @@
 
     Codeslinger.InitVideo = function() {
         $("#dialog-modal-video").dialog({
+            width: 867,
+            height: 498,
             autoOpen: false,
-            modal: true
-        });
+            modal: true,
+            resizable: false,
+            open: function (event, ui) {
+                var player = $('<iframe src=\"http://player.vimeo.com/video/18516820\" width=\"831\" height=\"433\" frameborder=\"0\" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>')
+                $('#dialog-modal-video').append(player);
+            },
+            close: function(event, ui) {
+                $('#dialog-modal-video').empty();
+            }
+    });
 
         $('.ui-dialog').find('button:contains("Close")').addClass('ui-icon-circle-close');
 
