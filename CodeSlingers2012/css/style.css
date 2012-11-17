@@ -524,7 +524,7 @@ header nav a.connect { padding-top: 21px; }
 	top: -18px;
 	width: 1400px;
 }
--#map_canvas {
+#map_canvas {
  height: 701px;
 width: 1400px;
  }
@@ -699,14 +699,14 @@ width: 1400px;
 	bottom: 0;
 	width:100%;
 }
-div.circle-outer{
+#connect  div.circle-outer{
    margin: 0 auto;
    float: left;
    left: 50%;
    position: absolute;
    top: 30%;
 }
-div.circle-inner{
+#connect  div.circle-inner{
   text-align: justify;
   float: left;
   position: relative;
