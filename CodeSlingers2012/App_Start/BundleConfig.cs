@@ -30,8 +30,7 @@ namespace CodeSlingers2012
                         "~/Scripts/modernizr-*"));
 
             bundles.Add(new StyleBundle("~/css").Include(
-                        "~/css/main.css",
-                        "~/css/normalize.css"));
+                        "~/css/style.css"));
 
             bundles.Add(new StyleBundle("~/Content/themes/base/css").Include(
                         "~/Content/themes/base/jquery.ui.core.css",

@@ -1,0 +1,363 @@
+/*-----------------------------------------------------------------------------------
+Template.css Information and Index
+-------------------------------------------------------------------------------------
+Fusion Room 2012 
+www.fusion-room.com
+
+ 0. Reset
+ 1. Font Declaration and General Text Styles
+ 2. Sprites and Buttons.
+ 3. Page Structure
+ 4. Layouts and Page Elements
+ 5. Conditional styles
+ 6. Media Queries
+ 7. Clearfix
+-----------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------
+0. Reset | Eric Meyer v2.0 | 20110126 http://meyerweb.com/eric/tools/css/reset/
+-----------------------------------------------------------------------------------*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section { display: block; }
+body { line-height: 1; }
+ol, ul { font-size: 16px; list-style: none; }
+blockquote, q { quotes: none; }
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*-----------------------------------------------------------------------------------
+ 1. Font Declaration and General Text Styles
+-----------------------------------------------------------------------------------*/
+@font-face {
+    font-family: 'BebasNeueRegular';
+    src: url('../Fonts/bebas-neue-fontfacekit/BebasNeue-webfont.eot');
+    src: url('../Fonts/bebas-neue-fontfacekit/BebasNeue-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../Fonts/bebas-neue-fontfacekit/BebasNeue-webfont.woff') format('woff'),
+         url('../Fonts/bebas-neue-fontfacekit/BebasNeue-webfont.ttf') format('truetype'),
+         url('../Fonts/bebas-neue-fontfacekit/BebasNeue-webfont.svg#BebasNeueRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'OpenSansLight';
+    src: url('../Fonts/open-sans-fontfacekit/OpenSans-Light-webfont.eot');
+    src: url('../Fonts/open-sans-fontfacekit/OpenSans-Light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../Fonts/open-sans-fontfacekit/OpenSans-Light-webfont.woff') format('woff'),
+         url('../Fonts/open-sans-fontfacekit/OpenSans-Light-webfont.ttf') format('truetype'),
+         url('../Fonts/open-sans-fontfacekit/OpenSans-Light-webfont.svg#OpenSansLight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'OpenSansLightItalic';
+    src: url('../Fonts/open-sans-fontfacekit/OpenSans-LightItalic-webfont.eot');
+    src: url('../Fonts/open-sans-fontfacekit/OpenSans-LightItalic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../Fonts/open-sans-fontfacekit/OpenSans-LightItalic-webfont.woff') format('woff'),
+         url('../Fonts/open-sans-fontfacekit/OpenSans-LightItalic-webfont.ttf') format('truetype'),
+         url('../Fonts/open-sans-fontfacekit/OpenSans-LightItalic-webfont.svg#OpenSansLightItalic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'OpenSansRegular';
+    src: url('../Fonts/open-sans-fontfacekit/OpenSans-Regular-webfont.eot');
+    src: url('../Fonts/open-sans-fontfacekit/OpenSans-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../Fonts/open-sans-fontfacekit/OpenSans-Regular-webfont.woff') format('woff'),
+         url('../Fonts/open-sans-fontfacekit/OpenSans-Regular-webfont.ttf') format('truetype'),
+         url('../Fonts/open-sans-fontfacekit/OpenSans-Regular-webfont.svg#OpenSansRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'OpenSansItalic';
+    src: url('../Fonts/open-sans-fontfacekit/OpenSans-Italic-webfont.eot');
+    src: url('../Fonts/open-sans-fontfacekit/OpenSans-Italic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../Fonts/open-sans-fontfacekit/OpenSans-Italic-webfont.woff') format('woff'),
+         url('../Fonts/open-sans-fontfacekit/OpenSans-Italic-webfont.ttf') format('truetype'),
+         url('../Fonts/open-sans-fontfacekit/OpenSans-Italic-webfont.svg#OpenSansItalic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'OpenSansSemibold';
+    src: url('../Fonts/open-sans-fontfacekit/OpenSans-Semibold-webfont.eot');
+    src: url('../Fonts/open-sans-fontfacekit/OpenSans-Semibold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../Fonts/open-sans-fontfacekit/OpenSans-Semibold-webfont.woff') format('woff'),
+         url('../Fonts/open-sans-fontfacekit/OpenSans-Semibold-webfont.ttf') format('truetype'),
+         url('../Fonts/open-sans-fontfacekit/OpenSans-Semibold-webfont.svg#OpenSansSemibold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'OpenSansSemiboldItalic';
+    src: url('../Fonts/open-sans-fontfacekit/OpenSans-SemiboldItalic-webfont.eot');
+    src: url('../Fonts/open-sans-fontfacekit/OpenSans-SemiboldItalic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../Fonts/open-sans-fontfacekit/OpenSans-SemiboldItalic-webfont.woff') format('woff'),
+         url('../Fonts/open-sans-fontfacekit/OpenSans-SemiboldItalic-webfont.ttf') format('truetype'),
+         url('../Fonts/open-sans-fontfacekit/OpenSans-SemiboldItalic-webfont.svg#OpenSansSemiboldItalic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'OpenSansBold';
+    src: url('../Fonts/open-sans-fontfacekit/OpenSans-Bold-webfont.eot');
+    src: url('../Fonts/open-sans-fontfacekit/OpenSans-Bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../Fonts/open-sans-fontfacekit/OpenSans-Bold-webfont.woff') format('woff'),
+         url('../Fonts/open-sans-fontfacekit/OpenSans-Bold-webfont.ttf') format('truetype'),
+         url('../Fonts/open-sans-fontfacekit/OpenSans-Bold-webfont.svg#OpenSansBold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'OpenSansBoldItalic';
+    src: url('../Fonts/open-sans-fontfacekit/OpenSans-BoldItalic-webfont.eot');
+    src: url('../Fonts/open-sans-fontfacekit/OpenSans-BoldItalic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../Fonts/open-sans-fontfacekit/OpenSans-BoldItalic-webfont.woff') format('woff'),
+         url('../Fonts/open-sans-fontfacekit/OpenSans-BoldItalic-webfont.ttf') format('truetype'),
+         url('../Fonts/open-sans-fontfacekit/OpenSans-BoldItalic-webfont.svg#OpenSansBoldItalic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'OpenSansExtrabold';
+    src: url('../Fonts/open-sans-fontfacekit/OpenSans-ExtraBold-webfont.eot');
+    src: url('../Fonts/open-sans-fontfacekit/OpenSans-ExtraBold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../Fonts/open-sans-fontfacekit/OpenSans-ExtraBold-webfont.woff') format('woff'),
+         url('../Fonts/open-sans-fontfacekit/OpenSans-ExtraBold-webfont.ttf') format('truetype'),
+         url('../Fonts/open-sans-fontfacekit/OpenSans-ExtraBold-webfont.svg#OpenSansExtrabold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'OpenSansExtraboldItalic';
+    src: url('../Fonts/open-sans-fontfacekit/OpenSans-ExtraBoldItalic-webfont.eot');
+    src: url('../Fonts/open-sans-fontfacekit/OpenSans-ExtraBoldItalic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../Fonts/open-sans-fontfacekit/OpenSans-ExtraBoldItalic-webfont.woff') format('woff'),
+         url('../Fonts/open-sans-fontfacekit/OpenSans-ExtraBoldItalic-webfont.ttf') format('truetype'),
+         url('../Fonts/open-sans-fontfacekit/OpenSans-ExtraBoldItalic-webfont.svg#OpenSansExtraboldItalic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'PacificoRegular';
+    src: url('../Fonts/pacifico-fontfacekit/Pacifico-webfont.eot');
+    src: url('../Fonts/pacifico-fontfacekit/Pacifico-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../Fonts/pacifico-fontfacekit/Pacifico-webfont.woff') format('woff'),
+         url('../Fonts/pacifico-fontfacekit/Pacifico-webfont.ttf') format('truetype'),
+         url('../Fonts/pacifico-fontfacekit/Pacifico-webfont.svg#PacificoRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+/* Text Styles
+-----------------------------------------*/
+h2 {
+	font: 64px/27px 'PacificoRegular';
+	color: #f54b4b;
+}
+h3 {
+	font: 44px/27px 'PacificoRegular';
+	color: #ffffff;
+}
+h4 {
+	font: 34px/24px 'PacificoRegular';
+	color: #ffffff;
+}
+h5 {
+	font: 24px/36px 'PacificoRegular';
+	color: #f23535;
+}
+p { 
+	font: 16px/24px 'OpenSansRegular';
+	color: #000;
+}
+ul { list-style-type: none; }
+ol { list-style-type: decimal; }
+
+/*-----------------------------------------------------------------------------------
+ 2. Sprites and Buttons
+-----------------------------------------------------------------------------------*
+
+/* Sprite backgrounds
+-----------------------------------------*/
+button { background: url( ‘../Images/masterSprite.png’ ) no-repeat; }
+
+/* Buttons
+-----------------------------------------*/
+
+/*-----------------------------------------------------------------------------------
+ 3. Page Structure
+-----------------------------------------------------------------------------------*/
+html {
+	background: url(../Images/repeat-bg.png) center 0 repeat;
+	border: 1px solid #4c4c4c;
+	height: 100%;
+	width: 100%;
+}
+body { 
+	background: url(../Images/static-bg.png) center 0 repeat-y;
+	height: 100%;
+	margin: 0 auto;
+	width: 1598px;
+}
+#wrapper { 
+	width: 1401px;
+}
+header {
+	position: fixed;
+	top: 0;
+	width: 1600px;
+}
+footer { }
+
+/*-----------------------------------------------------------------------------------
+4. Layouts and Page Elements
+-----------------------------------------------------------------------------------*/
+/* Header
+------------------------------------------*/
+header li span {
+	background: url(../Images/gts-header.png) no-repeat;
+	display: block;
+	height: 70px;
+	width: 313px;
+	text-indent: -9999px;
+}
+nav {
+	background: url(../Images/nav.png) no-repeat;
+	height: 99px;
+	margin: 0 auto;
+	width: 1401px;
+}
+nav ul {
+	margin-left: 243px;
+	padding-top: 8px;
+}
+nav li {
+	float: left;
+}
+nav a {
+	font: 24px/18px 'BebasNeueRegular';
+	color: #ffffff;
+	display:block;
+	letter-spacing: 1px;
+	padding-top: 20px;
+	text-decoration: none;
+}
+nav a.current {
+	color: #ffcccc;
+}
+nav a#home { margin-right: 54px; }
+nav a#about-us { margin-right: 50px; }
+nav a#menu { margin-right: 38px; }
+nav a#locations { 
+	margin: 0 44px 0 24px;
+	padding-top: 21px;
+}
+nav a#jobs { 
+	margin-right: 44px;
+	padding-top: 21px;
+}
+nav a#connect { padding-top: 21px; }
+
+/* Homepage
+------------------------------------------*/
+.logo {
+	background: url(../Images/gts-logo.png) no-repeat;
+	display: block;
+	height: 255px;
+	width: 497px;
+}
+
+
+/*-----------------------------------------------------------------------------------
+ 5. Conditional styles
+-----------------------------------------------------------------------------------*/
+
+/* Conditional styles for firefox
+------------------------------------------*/
+@-moz-document url-prefix() {
+}
+
+/* Conditional styles for webkit browsers
+------------------------------------------*/
+@media all and (-webkit-min-device-pixel-ratio:0) {
+	/*header li span {
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(1%,#ff9999), color-stop(17%,#990000), color-stop(70%,#ff3333), color-stop(100%,#990000));
+		background:-webkit-linear-gradient(top, #ff9999 1%,#990000 17%,#ff3333 70%,#990000 100%);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		-webkit-text-stroke: 1px white;
+		font: 38px/18px 'PacificoRegular', sans-serif;
+		text-indent: 0;
+	}*/
+}
+
+/* Conditional styles for IE
+------------------------------------------*/
+
+/*-----------------------------------------------------------------------------------
+6. Media Queries
+-----------------------------------------------------------------------------------*/
+@media all and (max-width: 1024px) {
+	
+}
+@media all and (max-width: 480px) {	
+
+}
+
+/*-----------------------------------------------------------------------------------
+7. Clearfix
+-----------------------------------------------------------------------------------*/
+.clearfix:before, .clearfix:after, ul:before, ul:after, li:before, li:after, .col:before, .col:after, header:before, header:after{ content:"\0020";display:block;height:0;visibility:hidden; }
+.clearfix:after, ul:after, li:after, col:after, header:after{ clear:both; }
+.clearfix, ul, li, .col, header{ zoom: 1; }
