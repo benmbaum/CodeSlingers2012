@@ -495,6 +495,54 @@ nav a.connect { padding-top: 21px; }
 	position: relative;
 	top: -16px;
 }
+#circles .top-half {
+	background: url(../Images/half-circle-top.png) no-repeat;
+	height: 138px;
+	width: 325px;
+	position: absolute;
+	top: 0;
+	right: 225px;
+	z-index: 1;
+}
+#circles .bottom-half {
+	background: url(../Images/half-circle-bottom.png) no-repeat;
+	height: 127px;
+	width: 325px;
+	position: absolute;
+	bottom: 0;
+	right: 225px;
+	z-index: 1;
+}
+#circles .mpls {
+	background: rgba(199,46,46,.8);
+	border-radius: 50%;
+	height: 329px;
+	width: 329px;
+	position: absolute;
+	top: 64px;
+	right: 225px;
+	z-index: 2;
+}
+#circles h3 {
+	margin: 100px 58px 35px;
+}
+#circles p {
+	font: 30px/28px 'BebasNeueRegular';
+	text-transform: uppercase;
+	color: white;
+	margin-left: 2px;
+	text-align: center;
+}
+#circles .stp {
+	background: rgba(199,46,46,.8);
+	border-radius: 50%;
+	height: 329px;
+	width: 329px;
+	position: absolute;
+	top: 320px;
+	right: 225px;
+	z-index: 3;
+}
 
 /* Jobs
 ------------------------------------------*/
