@@ -15,6 +15,7 @@ namespace CodeSlingers2012.Models
         public LocationViewModel locations { get; set; }
         public JobsViewModel jobs { get; set; }
         public FooterViewModel footer { get; set; }
+        public TopViewModel top { get; set; }
 
         public void InitHomeViewModel()
         {
@@ -27,6 +28,12 @@ namespace CodeSlingers2012.Models
             footer = new FooterViewModel();
         }
 
+    }
+
+    public class TopViewModel
+    {
+        public HomeImageViewModel homeImages { get; set; }
+        public HomeLinkViewModel homeLinks { get; set; }
     }
 
     public class PageNavViewModel
