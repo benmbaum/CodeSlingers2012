@@ -47,6 +47,19 @@ namespace CodeSlingers2012.Entities
             return item;
         }
 
+        public SectionContent GetSectionContentById(int Id)
+        {
+            var item = new SectionContent();
+
+            using (var repo = new CodeSlingers2012Entities())
+            {
+                item = (from r in repo.SectionContents
+                        where r.Id == Id
+                        select r).FirstOrDefault();
+            }
+            return item;
+        }
+
         public void SaveSectionContent(SectionContent sectionItem)
         {
             SectionContent item;

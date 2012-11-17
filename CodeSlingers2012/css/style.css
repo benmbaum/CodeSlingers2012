@@ -263,10 +263,12 @@ body {
 #wrapper { 
 	margin: 0 auto;
 	width: 1401px;
+	height: 100%;
 }
 #mainContainer {
 	margin: 0 auto;
 	width: 1399px;
+	height: 100%;
 }
 header {
 	position: fixed;
@@ -421,7 +423,7 @@ nav a.connect { padding-top: 21px; }
 	background: url(../Images/about-bg.jpg) no-repeat;
 	width: 100%;
 	position: relative;
-	height: 683px;
+	height: 700px;
 }
 #about-content {
 	background: rgba(255,255,255,.5);
@@ -675,10 +677,49 @@ div.circle-inner{
 ------------------------------------------*/
 footer {
 	background: #000000;
-	height: 236px;
+	height: 237px;
 	position: relative;
 	top: -30px;
 	width: 1401px;
+}
+footer .left{ 
+	float: left;
+	margin-left: 264px;
+	margin-top:25px;
+}
+footer .left img.footer-sushi {
+	position: absolute;
+	left: 264px;
+	top: 86px;
+}
+footer .happy-hour { 
+	float: right; 
+	margin-right: 225px; 
+	margin-top:25px;
+}
+footer .dinner { 
+	float: right; 
+	margin-right: 87px; 
+	margin-top: 25px;
+}
+footer .back-to-top {
+	position: absolute;
+	right: 225px;
+	top: 190px;
+	text-decoration: none;
+	color: #f1dd00;
+	font: 20px 'PacificoRegular';
+}
+footer h3 {
+	font: 24px/36px 'PacificoRegular';
+	color: #f23535;
+	text-align: right;
+	padding-bottom: 10px;
+}
+footer p {
+	font: 20px/27px 'BebasNeueRegular';
+	color: white;
+	text-align: right;
 }
 
 /*-----------------------------------------------------------------------------------

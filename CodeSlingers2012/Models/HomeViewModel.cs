@@ -1,4 +1,5 @@
 ﻿using CodeSlingers2012.Entities;
+using System.ComponentModel.DataAnnotations;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -32,43 +33,44 @@ namespace CodeSlingers2012.Models
 
     public class TopViewModel
     {
-        public HomeImageViewModel homeImages { get; set; }
-        public HomeLinkViewModel homeLinks { get; set; }
+        public List<SectionContentModel> homeImages { get; set; }
+        public List<SectionContentModel> homeLinks { get; set; }
     }
 
     public class PageNavViewModel
     {
-        public List<SectionContent> items { get; set; }
+        public List<SectionContentModel> items { get; set; }
     }
 
     public class HomeImageViewModel
     {
-        public List<SectionContent> items { get; set; }
+        public List<SectionContentModel> items { get; set; }
     }
 
     public class HomeLinkViewModel
     {
-        public List<SectionContent> items { get; set; }
+        public List<SectionContentModel> items { get; set; }
     }
 
     public class MenuViewModel
     {
-        public List<SectionContent> items { get; set; }
+        public List<SectionContentModel> items { get; set; }
     }
 
     public class LocationViewModel
     {
-        public List<SectionContent> items { get; set; }
+        public List<SectionContentModel> items { get; set; }
     }
 
     public class JobsViewModel
     {
-        public List<SectionContent> items { get; set; }
+        public List<SectionContentModel> items { get; set; }
     }
 
     public class FooterViewModel
     {
-        public List<SectionContent> items { get; set; }
+        [UIHint("SectionContent")]
+        public List<SectionContentModel> items { get; set; }
     }
 
 }
