@@ -1,4 +1,5 @@
 ﻿using CodeSlingers2012.Entities;
+using CodeSlingers2012.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,9 +12,9 @@ namespace CodeSlingers2012.Controllers
     {
         public ActionResult Index()
         {
-            ViewBag.Message = "Modify this template to jump-start your ASP.NET MVC application.";
+            var model = BuildHomeModel();
 
-            return View();
+            return View(model);
         }
 
         public ActionResult About()
@@ -28,6 +29,23 @@ namespace CodeSlingers2012.Controllers
             ViewBag.Message = "Your contact page.";
 
             return View();
+        }
+
+        private HomeViewModel BuildHomeModel()
+        {
+            var repo = new Repository();
+            var model = new HomeViewModel();
+
+            model.InitHomeViewModel();
+            model.nav.items = repo.GetSectionContentItems(SectionNames.Header);
+            model.homeImages.items = repo.GetSectionContentItems(SectionNames.HomeImages);
+            model.homeLinks.items = repo.GetSectionContentItems(SectionNames.HomeLinks);
+            model.menu.items = repo.GetSectionContentItems(SectionNames.Menu);
+            model.locations.items = repo.GetSectionContentItems(SectionNames.Location);
+            model.jobs.items = repo.GetSectionContentItems(SectionNames.Jobs);
+            model.footer.items = repo.GetSectionContentItems(SectionNames.Footer);
+
+            return model;
         }
     }
 }

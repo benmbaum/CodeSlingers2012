@@ -11,9 +11,22 @@ namespace CodeSlingers2012.Models
         public PageNavViewModel nav { get; set; }
         public HomeImageViewModel homeImages { get; set; }
         public HomeLinkViewModel homeLinks { get; set; }
+        public MenuViewModel menu { get; set; }
         public LocationViewModel locations { get; set; }
         public JobsViewModel jobs { get; set; }
         public FooterViewModel footer { get; set; }
+
+        public void InitHomeViewModel()
+        {
+            nav = new PageNavViewModel();
+            homeImages = new HomeImageViewModel();
+            homeLinks = new HomeLinkViewModel();
+            menu = new MenuViewModel();
+            locations = new LocationViewModel();
+            jobs = new JobsViewModel();
+            footer = new FooterViewModel();
+        }
+
     }
 
     public class PageNavViewModel
@@ -27,6 +40,11 @@ namespace CodeSlingers2012.Models
     }
 
     public class HomeLinkViewModel
+    {
+        public List<SectionContent> items { get; set; }
+    }
+
+    public class MenuViewModel
     {
         public List<SectionContent> items { get; set; }
     }
