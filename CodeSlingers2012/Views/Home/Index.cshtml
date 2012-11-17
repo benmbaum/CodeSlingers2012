@@ -5,14 +5,14 @@
 }
 
 @section nav {
-    @Html.DisplayFor(m => m.nav)
+    @{Html.DisplayFor(m => m.nav, "PageNav");}
 }
 
 <div id="mainContainer">
     <section class="parallx_container" id="home">
         <h1><img src="@Url.Content("~/Images/gts-logo.png")" alt="Good Time Sushi" /></h1>
-        @Html.DisplayFor(m => m.homeImages)
-        @Html.DisplayFor(m => m.homeLinks)
+        @{Html.DisplayFor(m => m.homeImages, "HomeImage");}
+        @{Html.DisplayFor(m => m.homeLinks, "HomeLink");}
     </section>
 
     <section class="parallx_container" id="about-us">
@@ -38,10 +38,10 @@
         
     </section>
     <section class="parallx_container" id="locations">
-        @Html.DisplayFor(m => m.locations)
+        @{Html.DisplayFor(m => m.locations, "Locations");}
     </section>
     <section class="parallx_container" id="jobs">
-
+        @{Html.DisplayFor(m => m.jobs, "Jobs");}
     </section>
     <section class="parallx_container" id="connect">
 
