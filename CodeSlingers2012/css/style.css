@@ -230,7 +230,7 @@ ol { list-style-type: decimal; }
 
 /* Sprite backgrounds
 -----------------------------------------*/
-.prev, .next,  #homecallouts article summary a span{ background: url( ../Images/masterSprite.png ) no-repeat; }
+.prev, .next,  #homecallouts article summary a span, button{ background: url( ../Images/masterSprite.png ) no-repeat; }
 
 /* Buttons
 -----------------------------------------*/
@@ -551,6 +551,50 @@ nav a.connect { padding-top: 21px; }
 	height: 703px;
 	position: relative;
 	top: -16px;
+}
+#jobs .callout {
+	background: rgba(216,172,116,.8);
+	border-radius: 50%;
+	height: 534px;
+	position: absolute;
+	right: 123px;
+	top: 79px;
+	width: 534px;
+}
+.upper-frame img {
+	position: absolute;
+	top: -37px;
+	z-index: 1;
+}
+.lower-frame img {
+	position: absolute;
+	top: 147px;
+	left: 216px;
+	z-index: 2;
+}
+#jobs h2 {
+	color: #bd2424;
+	float: left;
+	margin: 16px 0 0 177px;
+}
+#jobs p {
+	float: left;
+	text-align: center;
+	width: 406px;
+	margin: 17px 0 32px 74px;
+	font: 16px/24px 'OpenSansRegular';
+}
+#jobs button {
+	margin-left: 210px;
+	background-position: -114px 0;
+	float: left;
+	width: 140px;
+	letter-spacing: 1px;
+	border: none;
+	color: white;
+	font: 24px 'BebasNeueRegular';
+	height: 43px;
+	text-shadow: 2px 2px black;
 }
 
 /* Connect
