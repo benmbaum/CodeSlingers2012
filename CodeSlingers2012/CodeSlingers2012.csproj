@@ -285,6 +285,8 @@
       <SubType>Code</SubType>
     </Content>
     <Content Include="Views\Shared\DisplayTemplates\Connect.cshtml" />
+    <Content Include="Views\Shared\DisplayTemplates\Footer.cshtml" />
+    <Content Include="Views\Shared\DisplayTemplates\About.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Shared\_AdminLayout.cshtml" />
