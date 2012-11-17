@@ -692,13 +692,24 @@ width: 1400px;
 #connect .twitter article.circle-3 p{
 	margin-top: 120px;
 }
+nav a.connect { padding-top: 21px; }
 #connect .ig {
 	position:absolute;
 	background: #ffffff;
 	height: 150px;
 	bottom: 0;
-	width:100%;
+	width:1400px;
+   overflow: hidden;
 }
+#connect .ig ul {
+   width: 1500px;
+}
+#connect .ig ul li {
+   display: block;
+   float: left;
+   width: 150px;
+    height: 150px;
+ }
 #connect  div.circle-outer{
    margin: 0 auto;
    float: left;
