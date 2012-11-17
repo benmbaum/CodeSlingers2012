@@ -18,7 +18,7 @@
         @{ Html.RenderPartial("DisplayTemplates/About"); }
     </section>
     <section class="parallx_container" id="menu">
-        
+        @Html.DisplayFor(m => m.menu, "Menu")
     </section>
     <section class="parallx_container" id="locations">
         @Html.DisplayFor(m => m.locations, "Locations")

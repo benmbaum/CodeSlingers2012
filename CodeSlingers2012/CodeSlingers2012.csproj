@@ -321,6 +321,7 @@
     <Content Include="Views\Shared\EditorTemplates\Jobs.cshtml" />
     <Content Include="Views\Admin\ContentEdit.cshtml" />
     <Content Include="Views\Shared\DisplayTemplates\ContentAdmin.cshtml" />
+    <Content Include="Views\Shared\DisplayTemplates\Menu.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Shared\_AdminLayout.cshtml" />
