@@ -351,6 +351,7 @@ header nav a.connect { padding-top: 21px; }
 	position: absolute;
 	top: 360px;
 	width: 100%;
+    z-index: 4;
 }
 #homerotatornav a {
 	display: block;
@@ -365,6 +366,7 @@ header nav a.connect { padding-top: 21px; }
 	position: absolute;
 	top: 531px;
 	width: 1267px;
+    z-index: 5;
 }
 #homecallouts article {
 	float: left;
