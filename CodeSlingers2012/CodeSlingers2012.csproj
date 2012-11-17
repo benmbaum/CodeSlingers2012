@@ -266,6 +266,7 @@
     <Content Include="Views\Shared\DisplayTemplates\PageNavItem.cshtml" />
     <Content Include="Views\Shared\DisplayTemplates\HomeImage.cshtml" />
     <Content Include="Views\Shared\DisplayTemplates\HomeLink.cshtml" />
+    <Content Include="Views\Shared\DisplayTemplates\Locations.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
