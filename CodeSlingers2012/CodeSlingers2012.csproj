@@ -322,11 +322,8 @@
     <Content Include="Images\nav.png" />
     <Content Include="Images\repeat-bg.png" />
     <Content Include="Images\slide-img1.jpg" />
-    <Content Include="Images\slide-img1.png" />
     <Content Include="Images\slide-img2.jpg" />
-    <Content Include="Images\slide-img2.png" />
     <Content Include="Images\slide-img3.jpg" />
-    <Content Include="Images\slide-img3.png" />
     <Content Include="Images\static-bg.png" />
     <Content Include="Images\sushi-caviar-topping.png" />
     <Content Include="Images\sushi-crab-top.png" />
