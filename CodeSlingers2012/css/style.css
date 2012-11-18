@@ -716,6 +716,17 @@ margin-bottom:10px;
 #form0 input[type="submit"]{background:url(../Images/masterSprite.png) no-repeat -114px 0; width:137px;height:45px;display:block;border:none;
 	font:24px 'BebasNeueRegular';color:white;text-shadow:2px 2px #000;float: right;
 	margin-right: 182px;}
+#form .input-validation-error {
+	background: #ff9494; /* Old browsers */
+	background: -moz-linear-gradient(top, #ff9494 0%, #ffcfcf 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ff9494), color-stop(100%,#ffcfcf)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #ff9494 0%,#ffcfcf 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #ff9494 0%,#ffcfcf 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #ff9494 0%,#ffcfcf 100%); /* IE10+ */
+	background: linear-gradient(to bottom, #ff9494 0%,#ffcfcf 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff9494', endColorstr='#ffcfcf',GradientType=0 ); /* IE6-9 */
+	box-shadow:0;
+}
 
 /* Connect
 ------------------------------------------*/
