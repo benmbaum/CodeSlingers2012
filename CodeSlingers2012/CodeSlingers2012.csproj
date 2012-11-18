@@ -298,6 +298,7 @@
     <Content Include="Fonts\pacifico-fontfacekit\Pacifico-webfont.eot" />
     <Content Include="Fonts\pacifico-fontfacekit\Pacifico-webfont.ttf" />
     <Content Include="Fonts\pacifico-fontfacekit\Pacifico-webfont.woff" />
+    <None Include="Properties\PublishProfiles\Codeslingers 2012.pubxml" />
     <None Include="Scripts\jquery-1.7.1.intellisense.js" />
     <Content Include="Images\about-bg.jpg" />
     <Content Include="Images\blurred-sushi.png" />
