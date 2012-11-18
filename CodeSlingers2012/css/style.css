@@ -676,6 +676,46 @@ width: 1400px;
 	height: 43px;
 	text-shadow: 2px 2px black;
 }
+/* Form */
+#form0 {
+	background: white;
+	width: 746px;
+	height: 504px;
+	position: relative;
+	z-index: 5;
+	margin: 0 auto;
+	border-radius: 20px;
+	box-shadow:0px 0px 27px 6px black;
+}
+#form0 h3 { color: #d60303;float: left;
+color: #D60303;
+margin: 27px 0 0 208px;}
+#form0 fieldset{ float: left; width:100%;}
+#form0 .left { width: 262px; margin-left: 32px;float:left;margin-top:60px;margin-right:30px;}
+#form0 input { float:left;clear:left; }
+#form0 .right{width:381px;float:left;margin-top:60px;}
+#form0 input[type="text"]{height:21px;width:230px;padding:10px 15px;border-radius: 10px;
+height: 21px;
+width: 230px;
+border: 1px solid #999;
+box-shadow: 1px 1px 6px 2px #DEDEDE inset;
+margin-bottom:10px;
+}
+#form0 textarea {
+	width:230px;padding:10px 15px;border-radius: 10px; border: 1px solid #999;
+	box-shadow: 1px 1px 6px 2px #DEDEDE inset;
+	margin-bottom:10px;
+	resize:none;
+}
+#form0 select {
+	width:230px;
+}
+#form0 input[type="radio"]{ float: none; clear: none;}
+#form0 { color: #4d4d4d; font:18px 'OpenSansRegular'; }
+#form0 textarea#About { width: 360px; }
+#form0 input[type="submit"]{background:url(../Images/masterSprite.png) no-repeat -114px 0; width:137px;height:45px;display:block;border:none;
+	font:24px 'BebasNeueRegular';color:white;text-shadow:2px 2px #000;float: right;
+	margin-right: 182px;}
 
 /* Connect
 ------------------------------------------*/
