@@ -1,4 +1,5 @@
-﻿using CodeSlingers2012.Entities;
+﻿using System.Web.Script.Serialization;
+using CodeSlingers2012.Entities;
 using CodeSlingers2012.Models;
 using System;
 using System.Collections.Generic;
@@ -53,6 +54,41 @@ namespace CodeSlingers2012.Controllers
             var returnItem = new List<SectionContentModel>();
             items.ForEach(i => returnItem.Add(i.ToSectionContentModel()));
             return returnItem;
+        }
+
+        [HttpPost]
+        public JsonResult JobForm(JobFormModel jobForm)
+        {
+            var response = new JobFormResponse {Status = JobFormResponse.ResponseStatus.Failure};
+            var js = new JavaScriptSerializer();
+
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    // Send a request to: http://vermillion.howard.fusionroomdev.com/api/vermillion
+                    //<VermillionForm xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.datacontract.org/2004/07/VermillionWebService.Models">
+                    //<About>About</About>
+                    //<Email>Email@Email.com</Email>
+                    //<Id>0</Id>
+                    //<Name>Your Name Here</Name>
+                    //<PhoneNumber>Your Phone Number</PhoneNumber>
+                    //<Resident>Resident</Resident>
+                    //<Selection>Selection</Selection>
+                    //<upload i:nil="true"/>
+                    //</VermillionForm>
+                }
+                catch (Exception ex)
+                {
+                    response.ErrorMessage = ex.Message;
+                }
+            }
+            else
+            {
+                response.ErrorMessage = "The request contains invlaid data.";
+            }
+
+            return Json(js.Serialize(response));
         }
     }
 }

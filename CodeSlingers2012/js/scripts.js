@@ -125,30 +125,53 @@
             autoOpen: false,
             modal: true,
             resizable: false,
-            open: function (event, ui) {
+            open: function(event, ui) {
                 var player = $('<iframe src=\"http://player.vimeo.com/video/18516820\" width=\"831\" height=\"433\" frameborder=\"0\" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>')
                 $('#dialog-modal-video').append(player);
             },
             close: function(event, ui) {
                 $('#dialog-modal-video').empty();
             }
-    });
+        });
 
         $('.ui-dialog').find('button:contains("Close")').addClass('ui-icon-circle-close');
 
-        $("#video-opener").click(function() {
+        $("#video-opener").click(function(e) {
             $("#dialog-modal-video").dialog("open");
-            return false;
+            e.preventDefault();
         });
 
     };
 
-Codeslinger.filterPath = function(string) {
-    return string
-        .replace(/^\//, '')
-        .replace(/(index|default).[a-zA-Z]{3,4}$/, '')
-        .replace(/\/$/, '');
-};
+    Codeslinger.InitJobsModal = function () {
+        $("#dialog-modal-jobs").dialog({
+            width: 800,
+            height: 800,
+            autoOpen: false,
+            modal: true,
+            resizable: false
+        });
+
+        $("button#jobsModal").click(function (e) {
+            $("#dialog-modal-jobs").dialog("open");
+            e.preventDefault();
+        });
+
+        $('button#jobCancel').click(function(e) {
+            $("#dialog-modal-jobs").dialog("close");
+            e.preventDefault();
+        });
+
+        Codeslinger.ImageUpload();
+    };
+
+    Codeslinger.filterPath = function(string) {
+        return string
+            .replace(/^\//, '')
+            .replace(/(index|default).[a-zA-Z]{3,4}$/, '')
+            .replace(/\/$/, '');
+    };
+    
     Codeslinger.scrollableElement = function(els) {
         for (var i = 0, argLength = arguments.length; i < argLength; i++) {
             var el = arguments[i],
@@ -166,7 +189,6 @@ Codeslinger.filterPath = function(string) {
         }
         return [];
     };
-    
 
     $('a[href*=#]').each(function () {
         var thisPath = Codeslinger.filterPath(this.pathname) || Codeslinger.locationPath;
@@ -197,6 +219,24 @@ Codeslinger.filterPath = function(string) {
         Codeslinger.locationPath = Codeslinger.filterPath(location.pathname);
         Codeslinger.scrollElem = Codeslinger.scrollableElement('html', 'body');
     });
+    
+    Codeslinger.ImageUpload = function () {
+
+        var button = $('.btnUploader');
+
+        var uploader = new qq.FileUploader({
+            element: button,
+            multiple: false,
+            allowedExtensions: ['doc', 'docx', 'txt', 'pdf', 'rtf'],
+            sizeLimit: 0,
+            minSizeLimit: 0,
+            debug: false,
+            onSubmit: function (id, fileName) {
+                alert(fileName);
+                return false;
+            }
+        });
+    };
 
 })(window);
 
@@ -209,4 +249,6 @@ $(function () {
     Codeslinger.GetTweets();
     Codeslinger.GetIG();
     Codeslinger.InitVideo();
+    Codeslinger.InitJobsModal();
+
 });

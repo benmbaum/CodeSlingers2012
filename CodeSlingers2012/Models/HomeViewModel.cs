@@ -1,4 +1,5 @@
-﻿using CodeSlingers2012.Entities;
+﻿using System.Web.Mvc;
+using CodeSlingers2012.Entities;
 using System.ComponentModel.DataAnnotations;
 using System;
 using System.Collections.Generic;
@@ -17,6 +18,7 @@ namespace CodeSlingers2012.Models
         public JobsViewModel jobs { get; set; }
         public FooterViewModel footer { get; set; }
         public TopViewModel top { get; set; }
+        public JobFormModel form { get; set; }
 
         public void InitHomeViewModel()
         {
@@ -27,6 +29,7 @@ namespace CodeSlingers2012.Models
             locations = new LocationViewModel();
             jobs = new JobsViewModel();
             footer = new FooterViewModel();
+            form = new JobFormModel();
         }
 
     }
@@ -73,4 +76,56 @@ namespace CodeSlingers2012.Models
         public List<SectionContentModel> items { get; set; }
     }
 
+    public  class JobFormModel
+    {
+        public JobFormModel()
+        {
+            var rollData = new List<SelectListItem>();
+            rollData.Add(new SelectListItem() { Text = "Roll 1", Value = "1" });
+            rollData.Add(new SelectListItem() { Text = "Roll 2", Value = "2" });
+            rollData.Add(new SelectListItem() { Text = "Roll 3", Value = "3" });
+
+            Rolls = rollData.AsEnumerable();
+        }
+
+        [Required]
+        public string Name { get; set; }
+
+        [Required]
+        [DataType(DataType.EmailAddress)]
+        public string Email { get; set; }
+
+        [Required]
+        [DataType(DataType.PhoneNumber)]
+        public string PhoneNumber { get; set; }
+
+        public string Resident { get; set; }
+        
+        public int RollId { get; set; }
+
+        public IEnumerable<SelectListItem> Rolls { get; set; }
+
+        public FoodSelection Selection { get; set; }
+
+        public string About { get; set; }
+
+        public string upload { get; set; }
+
+        public enum FoodSelection
+        {
+            Sushi, Sake
+        }
+    }
+
+    public class JobFormResponse
+    {
+        public enum ResponseStatus
+        {
+            Failure,
+            Success,
+        }
+
+        public ResponseStatus Status { get; set; }
+        public string ErrorMessage { get; set; }
+    }
 }

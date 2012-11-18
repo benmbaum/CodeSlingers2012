@@ -1,0 +1,25 @@
+﻿@model CodeSlingers2012.Models.JobFormModel
+
+@using (Ajax.BeginForm("JobForm", "Home", new AjaxOptions { OnSuccess = "JobFormSuccess", OnFailure = "JobFormFailure", OnComplete = "JobFormComplete" }))
+{
+    <h3>Work With Us!</h3>
+    <fieldset>
+        <section class="left">
+            @Html.TextBox("Name", Model.Name, new { @class = "", title = "Who Are You?" })
+            @Html.TextBox("Email", Model.Email, new { @class = "", title = "What's Your E-Mail?" })
+            @Html.TextArea("Resident", Model.Resident, new { @class = "", title = "Where D'You Live?", rows = "10" })
+            @Html.TextBox("Name", Model.Name, new { @class = "", title = "What's Your Number?" })
+        </section>
+        <section class="right">
+            @Html.DropDownListFor(model => model.RollId, Model.Rolls, "Favorite Roll?")
+            <div><label for="sushi">Sushi</label> @Html.RadioButtonFor(x => x.Selection, "Sushi", new { id = "sushi" }) or <label for="sake">Sake</label> @Html.RadioButtonFor(x => x.Selection, "Sake", new { id = "sake" }) ???</div>
+            @Html.TextArea("About", Model.About, new { @class = "", title = "Tell Us About Yourself...", rows = "10" })
+            <div class="btnUploader"></div>
+            @Html.HiddenFor(model => model.upload)
+        </section>
+        <section class="controls">
+            <input type="submit" value="Apply Now" />
+            <button id="jobCancel" class="cancel ignore">Cancel</button>
+        </section>
+    </fieldset>
+}

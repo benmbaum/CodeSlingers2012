@@ -220,6 +220,7 @@
     <Content Include="Content\jquery-ui-1.9.1.custom.min.css" />
     <Content Include="css\admin.css" />
     <Content Include="css\bootstrap.css" />
+    <Content Include="css\fileuploader.css" />
     <Content Include="css\style.css" />
     <Content Include="favicon.ico" />
     <Content Include="Fonts\bebas-neue-fontfacekit\BebasNeue-webfont.svg" />
@@ -332,6 +333,7 @@
     <Content Include="Images\sushi.png" />
     <Content Include="Images\twitter-circle.png" />
     <Content Include="Images\video-thumbnail.png" />
+    <Content Include="js\fileuploader.js" />
     <Content Include="js\googlemaps.js" />
     <Content Include="js\ig-min.js" />
     <Content Include="js\infobox.js" />
@@ -398,6 +400,7 @@
     <Content Include="Views\Admin\ContentEdit.cshtml" />
     <Content Include="Views\Shared\DisplayTemplates\ContentAdmin.cshtml" />
     <Content Include="Views\Shared\DisplayTemplates\Menu.cshtml" />
+    <Content Include="Views\Home\_JobForm.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Shared\_AdminLayout.cshtml" />
