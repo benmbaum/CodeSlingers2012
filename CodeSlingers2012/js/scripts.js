@@ -285,11 +285,14 @@ $(window).load(function () {
             height: 800,
             autoOpen: false,
             modal: true,
-            resizable: false
+            resizable: false,
+            dialogClass: 'alert'
         });
 
         $("button#jobsModal").click(function (e) {
             $("#dialog-modal-jobs").dialog("open");
+            $(".ui-dialog-titlebar").hide();
+            $("#dialog-modal-video.ui-dialog-content.ui-widget-content").attr('border', 'none').attr('background', 'transparent');
             e.preventDefault();
         });
 

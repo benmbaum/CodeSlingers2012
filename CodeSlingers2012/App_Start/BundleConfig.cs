@@ -20,7 +20,8 @@ namespace CodeSlingers2012
 
             bundles.Add(new ScriptBundle("~/bundles/api").Include(
                         "~/js/googlemaps.js",
-                        "~/js/infobox.js"));
+                        "~/js/infobox.js",
+                        "~/js/fileuploader.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/main").Include("~/js/scripts.js", "~/js/jquery.cycle.all.js"));
 
